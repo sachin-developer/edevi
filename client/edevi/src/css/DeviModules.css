@@ -1,0 +1,59 @@
+.ShoppingModule .shoppingBackgroundImage {
+    background-image: url('../images/ShoppingBackground_2x.png');
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 300px;
+    opacity: 0.5;
+}
+
+.ShoppingModule .ShoppingModuleDescription {
+    font-size: 30pt;
+    font-family: 'Lora,Medium';
+    color: var(--title-text-color);
+    position: absolute;
+    text-align: left;
+    top: 15%;
+    left:0px;
+    padding: 5%;
+    opacity: 0.8;
+}
+
+.ShoppingModule .MuiGridListTileBar-subtitle {
+    white-space: normal;
+    color: #0D103B;
+    opacity: 0.9;
+    font-size: 16px;
+    text-align:'left';
+}
+
+.ShoppingModule .MuiGridListTileBar-titleWrap {
+    padding: 5%;
+    text-align: left;
+}
+
+.ShoppingModule .MuiGridListTileBar-actionIcon button {
+    font-size: 14px;
+    border: 1px solid #0D103B;
+    border-radius: 5%;
+} 
+
+.ShoppingModule .MuiGridListTileBar-actionIcon button.Temple {
+}
+
+.ShoppingModule .ShoppingCartIcon,
+.ShoppingCartView .ShoppingCartIcon {
+    position: fixed;
+    top: 15%;
+    left: 90%;
+    background: #F6D11B;
+}
+
+.ShoppingModule .ShoppingCartIcon:hover,
+.ShoppingCartView .ShoppingCartIcon:hover {
+    background: #F6D11B;
+    opacity: 0.6;
+}
+
+.ShoppingCartView .featureGridListTile div {
+    float: left
+}

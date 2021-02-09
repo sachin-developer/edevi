@@ -1,12 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import './css/App.css';
+import {BrowserRouter} from 'react-router-dom';
+import AppStateHandler from './AppStateHandler';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        E-Devi PlaceHolder Page
-      </header>
+      <BrowserRouter>
+         <AppStateHandler />
+      </BrowserRouter>
     </div>
   );
 }
