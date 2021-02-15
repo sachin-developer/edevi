@@ -20,9 +20,10 @@ body {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
   background-image: ur('../images/logo.svg');
+  margin: 20pt;
 }
 
 @media (prefers-reduced-motion: no-preference) {
