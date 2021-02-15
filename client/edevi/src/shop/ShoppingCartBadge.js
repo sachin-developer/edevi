@@ -23,7 +23,7 @@ export default function ShoppingcartBadge(props) {
         vertical: 'bottom',
         horizontal: 'right',
       }}>
-      <ShoppingCartIcon />
+      <ShoppingCartIcon onClick={props.data.onCartBadeClick}/>
       </Badge>
     </IconButton>
   );

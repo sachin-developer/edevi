@@ -5,6 +5,7 @@ import ShoppingModule from './shop/ShoppingModule';
 import DonateModule from './donate/DonateModule';
 import AboutModule from './about/AboutModule'; 
 import ShoppingCartView from './shop/ShoppingCartView';
+import Faq from './faq/Faq';
 
 class Routes extends Component {
 
@@ -27,6 +28,8 @@ class Routes extends Component {
 
                     <Route exact path='/donate' component={DonateModule}/>
                     <Route exact path='/about' component={AboutModule}/>
+                    <Route exact path='/faq' component={Faq}/>
+
                 </Switch>
           );
     }

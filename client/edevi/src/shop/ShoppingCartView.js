@@ -191,9 +191,13 @@ function ShoppingCartView(props) {
     setCartItems(cachedCartItems);
   }
 
+  const onCartBadeClick = () => {
+     props.history.push(props.history.location.pathname + "/" + 'Checkout')
+  }
+
   return (
     <div className="ShoppingCartView">
-        <ShoppingCartBadge data={{itemCount: ShoppingCartUtils.getCartQuantity()}} />
+        <ShoppingCartBadge data={{itemCount: ShoppingCartUtils.getCartQuantity(), onCartBadeClick}} />
         <div className={classes.shoppingCartGridList}>
               <GridList cellHeight={'auto'} className={classes.shoppingCartGList} cols={1} >
                 {currentDetailedItemView.itemCartView.map((shoppingItem) => (  

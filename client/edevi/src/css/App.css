@@ -3,6 +3,9 @@
 html, body, #root, .AppBody {
   height: 100%;
 }
+body {
+  background: var(--bg-theme-color);
+}
 
 .App {
   text-align: center;
