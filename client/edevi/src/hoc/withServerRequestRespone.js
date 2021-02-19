@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import {serverConstants} from '../Enums/ServerConstants';
+import {serverConstants} from '../enums/ServerConstants';
 import wretch from 'wretch'
 
-const withServerRequestResponse =  WrappedComponent => (props) => {
+
+const WithServerRequestResponse =  WrappedComponent => (props) => {
+    console.log(serverConstants);
     const handleRequestToServer = (prop) => {
         const defaultErrorHandler = (err) => {console.log(err)};
         const {endPoint, data, onSuccessHandler, onErrorHandler = defaultErrorHandler, 
@@ -47,8 +49,8 @@ const withServerRequestResponse =  WrappedComponent => (props) => {
     );
 }
 
-withServerRequestResponse.propTypes = {
+WithServerRequestResponse.propTypes = {
     WrappedComponent: PropTypes.element.isRequired
 }
 
-export default withServerRequestResponse;
+export default WithServerRequestResponse;

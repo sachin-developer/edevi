@@ -18,9 +18,9 @@ export default function ShoppingcartBadge({history}) {
   const itemCount =  0;
 
   const redirect = () => {
-    debugger;
     history.replace("Checkout")
   }
+  
   return (
     <IconButton aria-label="cart" className='ShoppingCartIcon'>
       <Badge badgeContent={itemCount} invisible={false} color="primary"
