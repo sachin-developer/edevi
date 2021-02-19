@@ -1,0 +1,38 @@
+.AboutModule {
+    color: white;
+    text-align: left;
+    margin: 10px;
+}
+
+.AboutModule .aboutTitle,
+.AboutModule .aboutHHTitle,
+.AboutModule .GlitchTitle{
+    font-size: var(--font-size-medium);
+}
+
+.AboutModule .aboutPart1,
+.AboutModule .aboutPart2 {
+    background-color: var(--header-toolbar-color);
+    font-size: var(--font-size-small);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.AboutModule ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .AboutModule .FeatureListBullet {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+  }
+
+  .AboutModule a,
+  .AboutModule .specialText{
+      color: var(--special-text-color);
+  }
+
