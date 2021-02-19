@@ -12,8 +12,6 @@ import InfoIcon from '@material-ui/icons/Info';
 import shoppingPlaceHolderitem from '../images/ShoppingItemPlaceholder.png';
 import shoppingTileBackground from '../images/PurpleTile.svg';
 import { IconButton } from "@material-ui/core";
-// import Fab from '@material-ui/core/Fab';
-// import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ShoppingCartBadge from './ShoppingCartBadge';
 import ShoppingCartUtils from './ShoppingCartUtils';
 
@@ -38,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center', 
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
-    borderRadius: '10%',
+    borderRadius: 'var(--shopitem-border-radius)',
     height: '40%',
     fontSize: '16px',
     flexDirection: 'column'
@@ -54,27 +52,26 @@ function ShoppingModule(props) {
             <Container maxWidth="sm" className='shoppingBackgroundImage'>             
             </Container>
             <div className='ShoppingModuleDescription'> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  Experience divine power at home!
             </div>
           </div>
-          <ShoppingCartBadge data={{itemCount:ShoppingCartUtils.getCartQuantity()}} />
+          <ShoppingCartBadge  history ={props.history} />
           <div className={classes.shoppingGridList}>
               <GridList cellHeight={'auto'} className={classes.shoppingGList} cols={2} spacing={30} >
                 {ShoppingItemsList.itemsList.map((shoppingItem) => (
-                  <GridListTile key={shoppingItem.itemName} className={classes.shoppingGridListTile}>
+                  <GridListTile key={shoppingItem.itemName} className={'shoppingGridListTile'} onClick={()=>{props.history.push(props.history.location.pathname + "/" + shoppingItem.itemName)}}>
                     <img className={classes.shoppingImg} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
                     <GridListTileBar
                       subtitle={shoppingItem.itemDescription}
                       actionPosition={'right'}
                       className={classes.shoppingTileBar}
                       actionIcon={
-                        <IconButton aria-label={`info about ${shoppingItem.Name}`} 
-                            className={shoppingItem.itemName +' ShoppingButton'}
-                            onClick={()=>{props.history.push(props.history.location.pathname + "/" + shoppingItem.itemName)}}>
-                          {shoppingItem.itemName}
-                        </IconButton>
+                        <img 
+                            className={shoppingItem.itemName.replace(' ','') +'ShoppingButton'} >
+                        </img>
                       }
-                    />
+                    >
+                    </GridListTileBar>
                   </GridListTile>
                 ))}
             </GridList>
@@ -82,5 +79,5 @@ function ShoppingModule(props) {
     </div>
   );
 }
-
+//>
 export default ShoppingModule;

@@ -1,9 +1,82 @@
+.MuiSvgIcon-colorPrimary 	{
+    color: white;
+}
+
+.shoppingCartNavigation {
+    display: block;
+    margin-left: -150px;
+    cursor: pointer;
+}
+
+.BookForAliasGroup .AliasTextField {
+    width: 100%;
+}
+
+.QuantityItem .QuantityForm{
+    padding: 10px 10px 0px 10px;
+}
+
+.QuantityItem .QuantityForm .QuantityControlsForm{
+    margin-left: 120px;
+}
+
+.QuantityItem .QuantityForm .quantityText{
+    margin-top: 5px;
+    color: black;
+    font-size: var(--font-size-small);
+}
+
+.QuantityItem .QuantityForm .QuantityControlsForm .addIcon,
+.QuantityItem .QuantityForm .QuantityControlsForm .removeIcon{
+    margin: 0px 5px 9px 5px;
+    cursor: pointer;
+    color: #2F4FFF;
+    opacity:0.9
+}
+
+
+.shoppingCartNavigation .NavigationIcon {
+    display: inline-block;
+    color: white;
+}
+
+.shoppingCartNavigation .ShoppingCartIcon {
+    background: #F6D11B;
+    float:right;
+    position: absolute;
+    margin-left: 150px;
+}
+
+.shoppingCartNavigation .NavigationText {
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
 .ShoppingModule .shoppingBackgroundImage {
     background-image: url('../images/ShoppingBackground_2x.png');
     background-repeat: no-repeat;
     height: 40vh;
     width: 300px;
     opacity: 0.5;
+}
+
+.ShoppingModule .shoppingGridListTile {
+    cursor: pointer;
+}
+
+.ShoppingModule img.TempleShoppingButton {
+    content: url('../images/shop/templebutton.svg');
+}
+.ShoppingModule img.PujaShoppingButton {
+    content: url('../images/shop/pujabutton.svg');
+}
+.ShoppingModule img.FastingShoppingButton {
+    content: url('../images/shop/fastingbutton.svg');
+}
+.ShoppingModule img.OtherProductsShoppingButton {
+    content: url('../images/shop/otherbutton.svg');
 }
 
 .ShoppingModule .ShoppingModuleDescription {
@@ -22,7 +95,7 @@
     white-space: normal;
     color: #0D103B;
     opacity: 0.9;
-    font-size: 16px;
+    font-size: var(--font-size-medium);
     text-align:'left';
 }
 
@@ -37,14 +110,10 @@
     border-radius: 5%;
 } 
 
-.ShoppingModule .MuiGridListTileBar-actionIcon button.Temple {
-}
-
-.ShoppingModule .ShoppingCartIcon,
-.ShoppingCartView .ShoppingCartIcon {
+.ShoppingModule .ShoppingCartIcon {
     position: fixed;
-    top: 15%;
-    left: 90%;
+    top: 10%;
+    left: 85%;
     background: #F6D11B;
 }
 
@@ -57,3 +126,98 @@
 .ShoppingCartView .featureGridListTile div {
     float: left
 }
+
+.largeShoppingCartGridListTile,
+.smallShoppingCartGridListTile {
+    padding: 5%;
+}
+
+.shoppingCartImg {
+     height: 250px; 
+     width: 100% 
+}
+
+.largeShoppingCartGridListTile {
+    max-width: 400px
+}
+
+.ShoppingCartDetailedTile {
+    background-image: url('../images/PurpleTile.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    border-radius: 0px;
+    font-size: var(--font-size-small);
+  }
+
+  .smallShoppingCartGridListTile .ShoppingCartDetailedTile {
+      height: 100%;
+  }
+
+  .cartDetailedTitle {
+    text-align: left;
+    font-weight: bold !important;
+  }
+
+  .ShoppingCartDetailedTile .cartDetailedDescription {
+    text-align: left;
+    font-size: var(--font-size-small);
+
+  }
+
+  .cartPrice {
+    float: right;
+    margin-right: '2%'
+  }
+
+  .ShoppingCartView .addToCart {
+    margin: 15px 15px 0px 15px;
+    text-transform: inherit;
+    color: #2F4FFF;
+    border: 1px solid #2F4FFF;
+  }
+
+  .ShoppingCartView .buyNow {
+    margin: 15px 15px 0px 15px;
+    text-transform: inherit;
+    background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
+    color: white;
+    border: none;
+  }
+
+  /* Cart View*/
+
+  .CheckoutCartView {
+      color: white;
+  }
+
+  .EmptyCircleView {
+      width:200px;
+      height:200px;
+      background-color: var(--header-toolbar-color);
+      border-radius: 50%;
+      margin:50px 50px 50px 100px;
+      
+  }
+
+  .EmptyCartView .EmptyCartTitle{
+    font-size: var(--font-size-large);
+    margin: 10px;
+
+  } 
+  .EmptyCartView .EmptyCartMessage{
+      font-size: var(--font-size-medium);
+      margin: 10px;
+
+  } 
+  .CheckoutCartView .EmptyCartView .ShowMeProducts{
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--special-text-color);
+} 
+

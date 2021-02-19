@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '1% 0% 1% 0%',
         backgroundColor: 'var(--header-toolbar-color)',
         color: 'white',
-        opacity: '0.7'
+        opacity: '0.9'
     },
     faqView: {
         maxWidth: 'calc(100vw - 10%)',
@@ -34,10 +34,11 @@ const useStyles = makeStyles((theme) => ({
 
     },
     faqQuestion: {
-        fontSize: '12pt'
+        fontSize: '14px',
+        fontWeight: 'bold'
     },
     faqAnswer: {
-        fontSize: '10pt'
+        fontSize: '12px'
     },
     email: {
         color: '#FEDC31'
