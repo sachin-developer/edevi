@@ -71,8 +71,7 @@ function AboutModule() {
           <div className='createdByTitle'>eDevi SQUAD</div>
           <div className='createdByTitle'>Created by Anandana Kapur</div>
           <div className='aboutPart2'>
-             with  Unnikrishnan Rajeev, Neeraj Gudipati, Shilpa Rajpurohit, Eesha Deshpande, Nikhil Rajpurohit, Ranjani Rajagopalan and Saugata Paul, Aoun Hassan, Suraaj Ajithakumar, Vikash Raj, Amruta Supate, Vivek-Abhishek, Vishnu Rajeev, Samyuktha Krishna, Miron D’Souza 
-          </div>
+          with Unnikrishnan Rajeev, Neeraj Gudipati, Shilpa Rajpurohit, Eesha Deshpande, Nikhil Rajpurohit, Ranjani Rajagopalan and Saugata Paul, Aoun Hassan, Suraaj Ajithakumar, Vikash Raj, Amruta Supate, Vivek-Abhishek, Vishnu Rajeev, Samyuktha Krishna, Miron D’Souza, Samad, Saqib          </div>
           <div className='createdByTitle'>Special Thanks</div>
           <div className='aboutPart2'>
             A R Ramanathan, Stephanos Stephanides, Nagma Sahi Ansari, Saudamini Jain, Anuranjan Pegu, Arjun Soni, Danny Goldfield, Namrata Gurung

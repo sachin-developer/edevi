@@ -37,8 +37,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
     borderRadius: 'var(--shopitem-border-radius)',
-    height: '40%',
-    fontSize: '16px',
+    height: '30%',
     flexDirection: 'column'
   }
 }));
@@ -52,10 +51,10 @@ function ShoppingModule(props) {
             <Container maxWidth="sm" className='shoppingBackgroundImage'>             
             </Container>
             <div className='ShoppingModuleDescription'> 
-                  Experience divine power at home!
+                  Experience <br/>divine power <br/>at home!
             </div>
           </div>
-          <ShoppingCartBadge  history ={props.history} />
+          <ShoppingCartBadge itemCount={ShoppingCartUtils.getCartQuantity()} history ={props.history} currentItemView={''}/>
           <div className={classes.shoppingGridList}>
               <GridList cellHeight={'auto'} className={classes.shoppingGList} cols={2} spacing={30} >
                 {ShoppingItemsList.itemsList.map((shoppingItem) => (

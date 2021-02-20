@@ -24,9 +24,9 @@ function LandingPageModule() {
   return (
     <div className={classes.landingPageModule}>
         <div>
-            <img className='App-logo' src={appLogo}/>
+            {/* <img className='App-logo' src={appLogo}/> */}
             <Typography className={classes.landingPageHeader} variant="h2">Welcome to the <br/> e-universe! </Typography> 
-            <Button className={classes.continueButton}> Continue </Button>
+            {/* <Button className={classes.continueButton}> Continue </Button> */}
         </div>
     </div>
   );

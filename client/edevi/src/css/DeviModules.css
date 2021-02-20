@@ -4,12 +4,20 @@
 
 .shoppingCartNavigation {
     display: block;
-    margin-left: -150px;
     cursor: pointer;
+    width: 100%;
+    max-width: 400px;
 }
 
+.BookForAliasGroup label .MuiFormControlLabel-label,
 .BookForAliasGroup .AliasTextField {
     width: 100%;
+    font-size: var(--font-size-small);
+}
+
+.BookForAliasGroup .AliasTextField input,
+.BookForAliasGroup .AliasTextField input:before {
+    font-size: var(--font-size-small); 
 }
 
 .QuantityItem .QuantityForm{
@@ -60,6 +68,7 @@
     height: 40vh;
     width: 300px;
     opacity: 0.5;
+    margin-top: 5px;
 }
 
 .ShoppingModule .shoppingGridListTile {
@@ -80,7 +89,7 @@
 }
 
 .ShoppingModule .ShoppingModuleDescription {
-    font-size: 30pt;
+    font-size: 32px;
     font-family: 'Lora,Medium';
     color: var(--title-text-color);
     position: absolute;
@@ -95,12 +104,12 @@
     white-space: normal;
     color: #0D103B;
     opacity: 0.9;
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-small);
     text-align:'left';
 }
 
 .ShoppingModule .MuiGridListTileBar-titleWrap {
-    padding: 5%;
+    padding: 5% 5% 0% 2%;
     text-align: left;
 }
 
@@ -132,9 +141,53 @@
     padding: 5%;
 }
 
-.shoppingCartImg {
+.smallShoppingCartGridListTile {
+    max-width: 190px;
+    display: inline-block;
+}
+
+.largeShoppingCartGridListTile .shoppingCartImg {
      height: 250px; 
      width: 100% 
+}
+.smallShoppingCartGridListTile .shoppingCartImg {
+    height: auto; 
+    width: 100%;
+}
+
+.smallShoppingCartGridListTile .cartDetailedTitle {
+    font-size: var(--font-size-small);
+    font-weight: 100;
+}
+
+.smallShoppingCartGridListTile .QuantityForm {
+    padding: 2px 2px 0px 2px; 
+}
+
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm {
+    margin-left: 33px;
+}
+
+
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm .addIcon,
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm .removeIcon {
+    margin: 0px 5px 0px 5px;
+}
+
+.ShoppingCartView .smallShoppingCartGridListTile .addToCart {
+    width: 100%;
+    box-sizing: border-box; 
+    margin: 5px 0px;
+
+}
+
+.SubOfferings {
+    /* width: 100%; */
+    max-width: 400px;
+}
+
+.SubOfferings .MuiGrid-item {
+    display: inline-block;
 }
 
 .largeShoppingCartGridListTile {
@@ -153,6 +206,12 @@
     box-sizing: border-box;
     border-radius: 0px;
     font-size: var(--font-size-small);
+  }
+
+  .ShoppingCartDetailedTile .cartDetailedTitle ,
+  .ShoppingCartDetailedTile .cartPrice {
+      font-size: var(--font-size-xl);
+      opacity: 0.9;
   }
 
   .smallShoppingCartGridListTile .ShoppingCartDetailedTile {
@@ -190,35 +249,6 @@
     color: white;
     border: none;
   }
+  
 
-  /* Cart View*/
-
-  .CheckoutCartView {
-      color: white;
-  }
-
-  .EmptyCircleView {
-      width:200px;
-      height:200px;
-      background-color: var(--header-toolbar-color);
-      border-radius: 50%;
-      margin:50px 50px 50px 100px;
-      
-  }
-
-  .EmptyCartView .EmptyCartTitle{
-    font-size: var(--font-size-large);
-    margin: 10px;
-
-  } 
-  .EmptyCartView .EmptyCartMessage{
-      font-size: var(--font-size-medium);
-      margin: 10px;
-
-  } 
-  .CheckoutCartView .EmptyCartView .ShowMeProducts{
-    font-size: var(--font-size-medium);
-    font-weight: bold;
-    color: var(--special-text-color);
-} 
-
+  

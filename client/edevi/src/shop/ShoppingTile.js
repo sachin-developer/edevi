@@ -8,7 +8,6 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import { IconButton } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
@@ -25,23 +24,10 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 
 const useStyles = makeStyles((theme) => ({
-    largeShoppingCartGridListTile: {
-      width: '100%'
-    },
-
     quantityCard: {
       backgroundColor: 'rgba(87,98,207,0.2)',
       padding: '0px',
       marginTop: '2%'
-    },
-    quantityCardContent: {
-    },
-    itemCountWidget: {
-      float: 'right',
-      display: 'inline-block'
-    },
-    quantityLabel: {
-      float: 'left',
     },
     featureImage: {
       width: '20px',
@@ -51,16 +37,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '12px',
       verticalAlign: 'text-top',
       marginLeft: '5px'
-    },
-    featureGridListTile: {
-      float: 'left'
-    },
-    quantityText: {
-      display: 'inline-block',
-      padding: '0px 10px 0px 10px',
-      position: 'absolute',
-      right:'58px',
-      marginTop: '2px'
     },
     shoppingItemDesc: {
       textAlign: 'left'
@@ -74,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
     featureRecommendation: {
       fontWeight: 'bold',
-      fontSize: '0.8rem',
+      fontSize: 'var(--font-size-small);',
       textAlign: 'left'
     }
   
@@ -139,13 +115,13 @@ function BookAlias({setAliasName}) {
 }
 
 
-function QuantityTile ({incomingQ}) {
-    const [quantity, setQuantity] = React.useState(incomingQ || 1);
+function QuantityTile ({setItemQuantity, quantity}) {
     const increase = () => {
-      setQuantity(Math.min(quantity - 1, 1));
+        setItemQuantity(Math.min(quantity + 1, 1000));
+
     }
     const decrease = () => {
-      setQuantity(Math.max(quantity + 1, 1000));
+        setItemQuantity(Math.max(quantity - 1, 1));
     }
     return (  
 
@@ -163,18 +139,40 @@ function QuantityTile ({incomingQ}) {
     )
 }
 
-function ShoppingTile({shoppingItem, increaseQuantity, decreaseQuantity, addToCart, getCartItemQuantity, size}) {
+/*
+    Adding to cart will always be of the format {
+        itemId:<>,
+        quantity: <>,
+        parentId: <>,
+        price: <>
+        aliasName: <> // Valid only for Puja Usecases
+    }
+*/
+function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart}) {
     const classes = useStyles();
     let gridClassName = size === 'Large' ? 'largeShoppingCartGridListTile' : 'smallShoppingCartGridListTile';
     const [aliasName, setAliasName] = React.useState('');
-    console.log(aliasName);
+    const [quantity, setItemQuantity] = React.useState(1);
+    // const [price, setItemPrice] = React.useState(shoppingItem.itemPrice);
+
+    const addToCart = () => {
+        ShoppingCartUtils.addToCart({
+            itemId: shoppingItem.itemId,
+            quantity,
+            parentId: shoppingItem.parentId,
+            price: shoppingItem.itemPrice*quantity,
+            aliasName
+        });
+        onAddToCart();
+    }
+
     return (
         <div key={shoppingItem.itemId} className={gridClassName}>
           <img className={'shoppingCartImg'} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
           <Paper className={'ShoppingCartDetailedTile'}>
-            <Typography variant="h6" component="h6" className={'cartDetailedTitle'}>
+            <Typography className={'cartDetailedTitle'}>
                 {shoppingItem.itemName}
-                <span className={'cartPrice'}>{shoppingItem.itemPrice}</span>
+                <span className={'cartPrice'}>{"₹ " + shoppingItem.itemPrice}</span>
             </Typography>
             <Typography className={'cartDetailedDescription'}>
                 {shoppingItem.itemDescription}
@@ -197,11 +195,11 @@ function ShoppingTile({shoppingItem, increaseQuantity, decreaseQuantity, addToCa
             </div>
             <Divider />
             <Card className={classes.quantityCard} variant="outlined">
-                <QuantityTile quantity={1}/>
+                <QuantityTile quantity={quantity} setItemQuantity={setItemQuantity}/>
             </Card>
             <div className={classes.buttonContainer}>
-                <Button variant='outlined' className={'addToCart'} onClick={()=>{addToCart(shoppingItem.itemId)}}>Add to cart</Button>
-                <Button variant='outlined' className={'buyNow'}>Buy Now</Button>
+                <Button variant='outlined' className={'addToCart'} onClick={addToCart}>Add to cart</Button>
+                {showBuyNow !== false && <Button variant='outlined' className={'buyNow'}>Buy Now</Button>}
             </div>
           </Paper>
       </div>

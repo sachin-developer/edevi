@@ -5,7 +5,8 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Button from '@material-ui/core/Button';
 import OrderProcess from './OrderProcess';
 import WithServerRequestRespone from '../hoc/WithServerRequestRespone';
-
+import ShoppingCartUtils from './ShoppingCartUtils';
+import CheckoutShoppingTile from './CheckoutShoppingTile';
 
 function EmptyCarView(props) {
     return (
@@ -18,26 +19,44 @@ function EmptyCarView(props) {
     )
 }
 
-function CheckoutCartView ({setCurrentView}) {
+function TotalBottomBar() {
+    let totalAmount = ShoppingCartUtils.getCartPrice();
+    return (
+        <div className={'TotalBottomBar'}>
+            <Typography variant="h5" component="h5" className={'Total'}>
+                         {"Total"}
+            </Typography>
+            <Typography variant="h5" component="h5" className={'TotalAmount'}>
+                    {"₹ " + totalAmount}
+            </Typography>
+        </div>
+    )
+}
+
+function LoadedCartView ({setCurrentView}) {
+    let getLocalStorageItems = ShoppingCartUtils.getLocalStorageItems();
     return (
         <div className='LoadedCartView'>
+            {
+                getLocalStorageItems.map((cartItem)=> (
+                    <CheckoutShoppingTile cartItem={cartItem} />     
+                ))
+            }
+            <TotalBottomBar />
             <Button variant='outlined' className={'proceedToBuy'} onClick={()=>{setCurrentView('RazorPay')}}>Proceed to Buy</Button>
         </div>
     )
 }
 
-function ShoppingCartView(props) {
+function CheckoutCartView(props) {
     const onNavigationClick = () => {
         props.history.goBack();
      }
-     const [currentView, setCurrentView] = React.useState('Checkout');
-    
+    const [currentView, setCurrentView] = React.useState('Checkout');
 
-     let locationSegments = props.location.pathname.split('/');
-     const currentItemView = locationSegments.pop();
-     const previousItemView = locationSegments[locationSegments.length - 1];
-
-//    let cartQuantity = props.data.itemQuantity;
+    let locationSegments = props.location.pathname.split('/');
+    const currentItemView = locationSegments.pop();
+    const previousItemView = locationSegments[locationSegments.length - 1];
     let itemQuantity = 1;
 
     return (
@@ -53,12 +72,12 @@ function ShoppingCartView(props) {
                     </div>
                     <span>{
                         itemQuantity === 0 && (
-                        <EmptyCarView />
+                            <EmptyCarView />
                         ) 
                     } 
                     {
                     itemQuantity > 0 && (
-                        <CheckoutCartView setCurrentView={setCurrentView}/>
+                        <LoadedCartView setCurrentView={setCurrentView}/>
                     ) 
                     } </span>   
                 </span>
@@ -79,4 +98,4 @@ function ShoppingCartView(props) {
 
 }
 
-export default ShoppingCartView;
+export default CheckoutCartView;

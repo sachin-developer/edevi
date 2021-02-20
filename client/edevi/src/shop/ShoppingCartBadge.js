@@ -14,11 +14,9 @@ const StyledBadge = withStyles((theme) => ({
   },
 }))(Badge);
 
-export default function ShoppingcartBadge({history}) {
-  const itemCount =  0;
-
+export default function ShoppingcartBadge({itemCount, history, currentItemView}) {
   const redirect = () => {
-    history.replace("Checkout")
+    history.push(currentItemView + "/Checkout")
   }
   
   return (

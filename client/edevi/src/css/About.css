@@ -36,3 +36,41 @@
       color: var(--special-text-color);
   }
 
+  /* Side Panel*/
+  .SidePanel .SidePanelListItem {
+      text-align: right;
+      opacity: 0.9;
+  }
+
+  .SideDrawer .MuiDrawer-paper {
+      background: var(--bg-theme-color);
+      color: white;
+      font-size: var(--font-size-large);
+      min-width: 250px;
+  }
+
+
+.SidePanel .AppLogoBar {
+    background-image: url('../images/LogoSideBar.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+.SidePanel .followEDevi {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.SidePanel .SmallSidePanelText .MuiListItemText-primary {
+    text-align: right;
+    font-size: var(--font-size-small)
+}
+
+.SidePanel .followIcons svg {
+    margin-right: 10px;
+    color: var(--special-text-color)
+
+}

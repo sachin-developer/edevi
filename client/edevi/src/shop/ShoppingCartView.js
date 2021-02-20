@@ -28,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
   },
   shoppingCartGridList: {
     padding: '2%',
-    display: 'flex',
-    flexWrap: 'wrap',
+    // display: 'flex',
+    // flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
@@ -115,14 +115,6 @@ const useStyles = makeStyles((theme) => ({
   }
 
 }));
-
-/*
-  Each cartItem will be of type {
-    itemId: '',
-    itemQuantity: <Number>
-  }
- */
-
  
 function ShoppingCartView(props) {
   const classes = useStyles();
@@ -130,72 +122,27 @@ function ShoppingCartView(props) {
   let locationSegments = props.location.pathname.split('/');
   const currentItemView = locationSegments.pop();
   const previousItemView = locationSegments[locationSegments.length - 1];
+
   let currentDetailedItemView = ShoppingItemsList.itemsList.find((item)=> {
       return item.itemId === currentItemView;
   });
+  const [refresh, forceRefresh] = React.useState(1);
 
-  let initCartItems = currentDetailedItemView.itemCartView.map((i)=> {
-    return {
-      itemId: i.itemId,
-      quantity: 1
-    }
-  });
-  const [cartItems, setCartItems] = React.useState([]);
-  console.log(cartItems);
-
-  const getCartItemQuantity = (currentItem) => {
-      let itemToPopulate = getCartItem(currentItem);
-      return  itemToPopulate ? itemToPopulate.quantity : 1 ;
-  }
-
-  const getCartItem = (itemID) => {
-    return  cartItems.find ((cachedItem)=> {
-      return cachedItem.itemId === itemID 
-    });
-  }
-
-  const addToCart = (itemI) => {
-    let currentCartItems = ShoppingCartUtils.getLocalStorageItems();
-    let item = currentCartItems.find((currCartItem)=>{
-        return currCartItem.itemId === itemI;
-    });
-    let cartItemQuantity = getCartItemQuantity(itemI);
-    if (item) {
-      item.itemQuantity = item.itemQuantity + cartItemQuantity;
-    } else {
-      item = {
-        itemId: itemI,
-        itemQuantity: cartItemQuantity
-      }
-      currentCartItems.push(item);
-    }
-    ShoppingCartUtils.setLocalStorageItems(currentCartItems);
-    // update localState to refresh view
-    let existingItem = getCartItem(itemI);
-    existingItem.quantity =  item.itemQuantity;
-    let newCartItems = [...cartItems];
-    setCartItems(newCartItems);
-  }
-
-  const increaseQuantity = (itemId) => {
-     let item = getCartItem(itemId);
-     item.quantity = item.quantity + 1;
-     let cachedCartItems = [...cartItems];
-     setCartItems(cachedCartItems);
-  }
-
-  const decreaseQuantity = (itemId) => {
-    let item = getCartItem(itemId);
-    item.quantity = Math.max(item.quantity - 1, 1);
-    let cachedCartItems = [...cartItems];
-    setCartItems(cachedCartItems);
-  }
   const onNavigationClick = () => {
      //props.history.goBack();
   }
 
+  const getSubOfferingsItem = () => {
+    return currentDetailedItemView.itemCartView.find((i)=> {
+        return i.subOfferings && i.subOfferings.length > 0;
+    });
+  };
 
-  console.log(props.history);
+  const onAddToCart= () => {
+     forceRefresh(refresh+1);
+  }
+
+  const subOfferingsItem = getSubOfferingsItem();
 
   return (
     <div className="ShoppingCartView">
@@ -205,53 +152,34 @@ function ShoppingCartView(props) {
                  <Typography variant="h5" component="h5" className={'NavigationText'}>
                       {previousItemView}
                  </Typography>
-                 <ShoppingCartBadge itemCount={ShoppingCartUtils.getCartQuantity()} history ={props.history} />
+                 <ShoppingCartBadge itemCount={ShoppingCartUtils.getCartQuantity()} history ={props.history} currentItemView={locationSegments.join('/')}/>
 
               </div>
               <grid className={classes.shoppingCartGList} cols={1} >
                 {
                   currentDetailedItemView.itemCartView.map((shoppingItem) => (  
                     <div>
-                      <ShoppingTile shoppingItem={shoppingItem} increaseQuantity={increaseQuantity} getCartItemQuantity={getCartItemQuantity}
-                          decreaseQuantity={decreaseQuantity} addToCart={addToCart} size={"Large"}/>
-                      {/* <span>{
-                          shoppingItem.hasOwnProperty('subOfferingTitle')  && (
-                          <div>
-                            <Typography variant="h6">
-                                  {shoppingItem.subOfferingTitle}
-                            </Typography>
-                          
-                            <GridList cellHeight={'auto'} className={classes.shoppingGList} cols={2} spacing={20} >
-                              {shoppingItem.subOfferings.map((subOfferingItem) => (
-                                  <ShoppingTile shoppingItem={subOfferingItem} increaseQuantity={increaseQuantity} getCartItemQuantity={getCartItemQuantity}
-                                    decreaseQuantity={decreaseQuantity} addToCart={addToCart} size={"small"}/>
-                                
-
-                                  // <GridListTile key={subOfferingItem.itemName} className={classes.shoppingGridListTile}>
-                                  //   <img className={classes.shoppingImg} src={shoppingPlaceHolderitem} alt={subOfferingItem.itemTitle} />
-                                  //   <GridListTileBar
-                                  //     subtitle={subOfferingItem.itemDescription}
-                                  //     actionPosition={'right'}
-                                  //     className={classes.shoppingTileBar}
-                                  //     actionIcon={
-                                  //       <IconButton aria-label={`info about ${subOfferingItem.Name}`} 
-                                  //           className={shoppingItem.itemName +' ShoppingButton'}
-                                  //           onClick={()=>{props.history.push(props.history.location.pathname + "/" + shoppingItem.itemName)}}>
-                                  //         {shoppingItem.itemName}
-                                  //       </IconButton>
-                                  //     }
-                                  //   />
-                                  // </GridListTile>
-                                ))}                     
-                            </GridList>
-                          </div>
-                          ) 
-                        }
-                      </span>  */}
+                      <ShoppingTile shoppingItem={shoppingItem} size={"Large"} onAddToCart={onAddToCart}/>
                     </div>                     
                   
                 ))}
             </grid>
+            {
+              subOfferingsItem && (
+                <div className='SubOfferings'>
+                       <grid container>
+                        {
+                          subOfferingsItem.subOfferings.map((subOfferingItem) => (  
+                            <Grid item xs>
+                              <ShoppingTile shoppingItem={subOfferingItem} size={"Small"} showBuyNow={false}/>
+                            </Grid>
+                          ))
+                        }
+                        </grid>
+                </div>
+              )
+            }
+            
           </div>
     </div>
   );
