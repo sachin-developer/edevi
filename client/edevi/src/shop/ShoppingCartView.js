@@ -8,8 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import shoppingTileBackground from '../images/PurpleTile.svg';
 import featureListBullet from '../images/featureDiamond.svg';
 
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { IconButton } from "@material-ui/core";
@@ -20,16 +19,17 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import CardContent from '@material-ui/core/CardContent';
 import ShoppingCartUtils from './ShoppingCartUtils';
-
-
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import ShoppingTile from './ShoppingTile';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 const useStyles = makeStyles((theme) => ({
   shoppingCartGridListTile: {
-    margin: '2%'
+    color: 'var(--title-text-color);'
   },
   shoppingCartGridList: {
     padding: '2%',
-    display: 'flex',
-    flexWrap: 'wrap',
+    // display: 'flex',
+    // flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%'
   },
   shoppingCartGList: {
-    maxWidth: '350px'
+    maxWidth: '400px'
   },
   ShoppingCartDetailedTile: {
     backgroundImage: `url(${shoppingTileBackground})`,
@@ -108,10 +108,6 @@ const useStyles = makeStyles((theme) => ({
   addIcon: {
     marginRight: '50px'
   },
-  addButton: {
-    margin: '15px 15px 0px 15px',
-    textTransform: 'inherit'
-  },
   featureRecommendation: {
     fontWeight: 'bold',
     fontSize: '0.8rem',
@@ -119,153 +115,71 @@ const useStyles = makeStyles((theme) => ({
   }
 
 }));
-
-/*
-  Each cartItem will be of type {
-    itemId: '',
-    itemQuantity: <Number>
-  }
- */
+ 
 function ShoppingCartView(props) {
   const classes = useStyles();
 
   let locationSegments = props.location.pathname.split('/');
   const currentItemView = locationSegments.pop();
+  const previousItemView = locationSegments[locationSegments.length - 1];
+
   let currentDetailedItemView = ShoppingItemsList.itemsList.find((item)=> {
       return item.itemId === currentItemView;
   });
+  const [refresh, forceRefresh] = React.useState(1);
 
-  const [cartItems, setCartItems] = React.useState(currentDetailedItemView.itemCartView.map((i)=> {
-      return {
-        itemId: i.itemId,
-        quantity: 1
-      }
-  }));
-  console.log(cartItems);
-
-  const getCartItemQuantity = (currentItem) => {
-      let itemToPopulate = getCartItem(currentItem);
-      return itemToPopulate.quantity ;
+  const onNavigationClick = () => {
+     //props.history.goBack();
   }
 
-  const getCartItem = (itemID) => {
-    return  cartItems.find ((cachedItem)=> {
-      return cachedItem.itemId === itemID 
+  const getSubOfferingsItem = () => {
+    return currentDetailedItemView.itemCartView.find((i)=> {
+        return i.subOfferings && i.subOfferings.length > 0;
     });
+  };
+
+  const onAddToCart= () => {
+     forceRefresh(refresh+1);
   }
 
-  const addToCart = (itemI) => {
-    let currentCartItems = ShoppingCartUtils.getLocalStorageItems();
-    let item = currentCartItems.find((currCartItem)=>{
-        return currCartItem.itemId === itemI;
-    });
-    let cartItemQuantity = getCartItemQuantity(itemI);
-    if (item) {
-      item.itemQuantity = item.itemQuantity + cartItemQuantity;
-    } else {
-      item = {
-        itemId: itemI,
-        itemQuantity: cartItemQuantity
-      }
-      currentCartItems.push(item);
-    }
-    ShoppingCartUtils.setLocalStorageItems(currentCartItems);
-    // update localState to refresh view
-    let existingItem = getCartItem(itemI);
-    existingItem.quantity =  item.itemQuantity;
-    let newCartItems = [...cartItems];
-    setCartItems(newCartItems);
-  }
-
-  const increaseQuantity = (itemId) => {
-     let item = getCartItem(itemId);
-     item.quantity = item.quantity + 1;
-     let cachedCartItems = [...cartItems];
-     setCartItems(cachedCartItems);
-  }
-
-  const decreaseQuantity = (itemId) => {
-    let item = getCartItem(itemId);
-    item.quantity = Math.max(item.quantity - 1, 1);
-    let cachedCartItems = [...cartItems];
-    setCartItems(cachedCartItems);
-  }
+  const subOfferingsItem = getSubOfferingsItem();
 
   return (
     <div className="ShoppingCartView">
-        <ShoppingCartBadge data={{itemCount: ShoppingCartUtils.getCartQuantity()}} />
         <div className={classes.shoppingCartGridList}>
-              <GridList cellHeight={'auto'} className={classes.shoppingCartGList} cols={1} >
-                {currentDetailedItemView.itemCartView.map((shoppingItem) => (  
-                  shoppingItem.itemType === 'cartItem'
-                   && (
-                    <GridListTile key={shoppingItem.itemId} className={classes.shoppingCartGridListTile}>
-                      <img className={classes.shoppingCartImg} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
-                      <Paper className={classes.ShoppingCartDetailedTile}>
-                        <Typography variant="h6" component="h6" className={classes.cartDetailedTitle}>
-                            {shoppingItem.itemName}
-                            <span className={classes.cartPrice}>{shoppingItem.itemPrice}</span>
-                        </Typography>
-                        <Typography variant="body1" className={classes.cartDetailedDescription}>
-                            {shoppingItem.itemDescription}
-                        </Typography>
-                        <div>
-                          {shoppingItem.itemFeatureList &&                          
-                          (
-                            <GridList cellHeight={'auto'} className={classes.cartFeaureList} cols={2} >
-                            {
-                              shoppingItem.itemFeatureList.map((feaureItem)=> (
-                                <GridListTile className='featureGridListTile' key={feaureItem.featureName}>
-                                    <img className={classes.featureImage} src={featureListBullet}/>
-                                    <span className={classes.featureName}>{feaureItem.featureName}</span>
-                                </GridListTile>
-                              ))
-                            }
-                            </GridList>
-                          )}
-                          {
-                            shoppingItem.itemRecommendation && (
-                              <Typography variant="body1" className={classes.featureRecommendation} >
-                                {shoppingItem.itemRecommendation}
-                              </Typography> 
-                            )
-                          }                         
-                        </div>
-                        <Divider />
-                        <Card className={classes.quantityCard} variant="outlined">
-                          <CardContent className={classes.quantityCardContent}>
-                            <span className={classes.quantityLabel}>
-                                {"Quantity"}
-                            </span>
-                            <div className={classes.itemCountWidget}>
-                              <AddCircleOutlineIcon className={classes.addIcon} onClick={()=>{increaseQuantity(shoppingItem.itemId)}}/>
-                                <div id="quantityLabel" className={classes.quantityText}>
-                                    {getCartItemQuantity(shoppingItem.itemId) + ""}
-                                </div>
-                              <RemoveCircleOutlineIcon onClick={()=>{decreaseQuantity(shoppingItem.itemId)}}/>
-                            </div>
-                          </CardContent>
-                          </Card>
-                          <div className={classes.buttonContainer}>
-                              <Button variant='outlined' className={classes.addButton} onClick={()=>{addToCart(shoppingItem.itemId)}}>Add to cart</Button>
-                              <Button variant='outlined' className={classes.addButton}>Buy Now</Button>
-                          </div>
-                      </Paper>
-                   </GridListTile>
-                  ) ||
-                  shoppingItem.itemType === 'text' && (
-                    <Paper className={classes.shoppingItemDescCard}>
-                        <Typography variant="h6">
-                            {shoppingItem.itemTitle}
-                        </Typography>
-                        <Typography variant="body1" className={classes.shoppingItemDesc}>
-                            {shoppingItem.itemDescription}
-                        </Typography>
-                    </Paper>
-                  )
+              <div className={'shoppingCartNavigation'} onClick={onNavigationClick}>
+                 <ArrowBackIcon color={'primary'} fontSize={'large'} className={'NavigationIcon'}/>
+                 <Typography variant="h5" component="h5" className={'NavigationText'}>
+                      {previousItemView}
+                 </Typography>
+                 <ShoppingCartBadge itemCount={ShoppingCartUtils.getCartQuantity()} history ={props.history} currentItemView={locationSegments.join('/')}/>
+
+              </div>
+              <grid className={classes.shoppingCartGList} cols={1} >
+                {
+                  currentDetailedItemView.itemCartView.map((shoppingItem) => (  
+                    <div>
+                      <ShoppingTile shoppingItem={shoppingItem} size={"Large"} onAddToCart={onAddToCart}/>
+                    </div>                     
                   
                 ))}
-            </GridList>
+            </grid>
+            {
+              subOfferingsItem && (
+                <div className='SubOfferings'>
+                       <grid container>
+                        {
+                          subOfferingsItem.subOfferings.map((subOfferingItem) => (  
+                            <Grid item xs>
+                              <ShoppingTile shoppingItem={subOfferingItem} size={"Small"} showBuyNow={false}/>
+                            </Grid>
+                          ))
+                        }
+                        </grid>
+                </div>
+              )
+            }
+            
           </div>
     </div>
   );

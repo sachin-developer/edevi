@@ -14,16 +14,19 @@ const StyledBadge = withStyles((theme) => ({
   },
 }))(Badge);
 
-export default function ShoppingcartBadge(props) {
-  const itemCount = props.data.itemCount || 0;
+export default function ShoppingcartBadge({itemCount, history, currentItemView}) {
+  const redirect = () => {
+    history.push(currentItemView + "/Checkout")
+  }
+  
   return (
     <IconButton aria-label="cart" className='ShoppingCartIcon'>
-      <Badge badgeContent={props.data.itemCount} invisible={props.data.shouldShowBadge} color="primary"
+      <Badge badgeContent={itemCount} invisible={false} color="primary"
       anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'right',
       }}>
-      <ShoppingCartIcon />
+      <ShoppingCartIcon onClick={redirect}/>
       </Badge>
     </IconButton>
   );

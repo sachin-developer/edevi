@@ -3,9 +3,12 @@
 html, body, #root, .AppBody {
   height: 100%;
 }
+body {
+  background: var(--bg-theme-color);
+}
 
 .App {
-  text-align: center;
+  /* text-align: center; */
   background: var(--bg-theme-color);
 }
 
@@ -17,9 +20,10 @@ html, body, #root, .AppBody {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
   background-image: ur('../images/logo.svg');
+  margin: 20pt;
 }
 
 @media (prefers-reduced-motion: no-preference) {

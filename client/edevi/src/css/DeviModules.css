@@ -1,13 +1,95 @@
+.MuiSvgIcon-colorPrimary 	{
+    color: white;
+}
+
+.shoppingCartNavigation {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+}
+
+.BookForAliasGroup label .MuiFormControlLabel-label,
+.BookForAliasGroup .AliasTextField {
+    width: 100%;
+    font-size: var(--font-size-small);
+}
+
+.BookForAliasGroup .AliasTextField input,
+.BookForAliasGroup .AliasTextField input:before {
+    font-size: var(--font-size-small); 
+}
+
+.QuantityItem .QuantityForm{
+    padding: 10px 10px 0px 10px;
+}
+
+.QuantityItem .QuantityForm .QuantityControlsForm{
+    margin-left: 120px;
+}
+
+.QuantityItem .QuantityForm .quantityText{
+    margin-top: 5px;
+    color: black;
+    font-size: var(--font-size-small);
+}
+
+.QuantityItem .QuantityForm .QuantityControlsForm .addIcon,
+.QuantityItem .QuantityForm .QuantityControlsForm .removeIcon{
+    margin: 0px 5px 9px 5px;
+    cursor: pointer;
+    color: #2F4FFF;
+    opacity:0.9
+}
+
+
+.shoppingCartNavigation .NavigationIcon {
+    display: inline-block;
+    color: white;
+}
+
+.shoppingCartNavigation .ShoppingCartIcon {
+    background: #F6D11B;
+    float:right;
+    position: absolute;
+    margin-left: 150px;
+}
+
+.shoppingCartNavigation .NavigationText {
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
 .ShoppingModule .shoppingBackgroundImage {
     background-image: url('../images/ShoppingBackground_2x.png');
     background-repeat: no-repeat;
     height: 40vh;
     width: 300px;
     opacity: 0.5;
+    margin-top: 5px;
+}
+
+.ShoppingModule .shoppingGridListTile {
+    cursor: pointer;
+}
+
+.ShoppingModule img.TempleShoppingButton {
+    content: url('../images/shop/templebutton.svg');
+}
+.ShoppingModule img.PujaShoppingButton {
+    content: url('../images/shop/pujabutton.svg');
+}
+.ShoppingModule img.FastingShoppingButton {
+    content: url('../images/shop/fastingbutton.svg');
+}
+.ShoppingModule img.OtherProductsShoppingButton {
+    content: url('../images/shop/otherbutton.svg');
 }
 
 .ShoppingModule .ShoppingModuleDescription {
-    font-size: 30pt;
+    font-size: 32px;
     font-family: 'Lora,Medium';
     color: var(--title-text-color);
     position: absolute;
@@ -22,12 +104,12 @@
     white-space: normal;
     color: #0D103B;
     opacity: 0.9;
-    font-size: 16px;
+    font-size: var(--font-size-small);
     text-align:'left';
 }
 
 .ShoppingModule .MuiGridListTileBar-titleWrap {
-    padding: 5%;
+    padding: 5% 5% 0% 2%;
     text-align: left;
 }
 
@@ -37,14 +119,10 @@
     border-radius: 5%;
 } 
 
-.ShoppingModule .MuiGridListTileBar-actionIcon button.Temple {
-}
-
-.ShoppingModule .ShoppingCartIcon,
-.ShoppingCartView .ShoppingCartIcon {
+.ShoppingModule .ShoppingCartIcon {
     position: fixed;
-    top: 15%;
-    left: 90%;
+    top: 10%;
+    left: 85%;
     background: #F6D11B;
 }
 
@@ -57,3 +135,120 @@
 .ShoppingCartView .featureGridListTile div {
     float: left
 }
+
+.largeShoppingCartGridListTile,
+.smallShoppingCartGridListTile {
+    padding: 5%;
+}
+
+.smallShoppingCartGridListTile {
+    max-width: 190px;
+    display: inline-block;
+}
+
+.largeShoppingCartGridListTile .shoppingCartImg {
+     height: 250px; 
+     width: 100% 
+}
+.smallShoppingCartGridListTile .shoppingCartImg {
+    height: auto; 
+    width: 100%;
+}
+
+.smallShoppingCartGridListTile .cartDetailedTitle {
+    font-size: var(--font-size-small);
+    font-weight: 100;
+}
+
+.smallShoppingCartGridListTile .QuantityForm {
+    padding: 2px 2px 0px 2px; 
+}
+
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm {
+    margin-left: 33px;
+}
+
+
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm .addIcon,
+.smallShoppingCartGridListTile .QuantityForm .QuantityControlsForm .removeIcon {
+    margin: 0px 5px 0px 5px;
+}
+
+.ShoppingCartView .smallShoppingCartGridListTile .addToCart {
+    width: 100%;
+    box-sizing: border-box; 
+    margin: 5px 0px;
+
+}
+
+.SubOfferings {
+    /* width: 100%; */
+    max-width: 400px;
+}
+
+.SubOfferings .MuiGrid-item {
+    display: inline-block;
+}
+
+.largeShoppingCartGridListTile {
+    max-width: 400px
+}
+
+.ShoppingCartDetailedTile {
+    background-image: url('../images/PurpleTile.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    border-radius: 0px;
+    font-size: var(--font-size-small);
+  }
+
+  .ShoppingCartDetailedTile .cartDetailedTitle ,
+  .ShoppingCartDetailedTile .cartPrice {
+      font-size: var(--font-size-xl);
+      opacity: 0.9;
+  }
+
+  .smallShoppingCartGridListTile .ShoppingCartDetailedTile {
+      height: 100%;
+  }
+
+  .cartDetailedTitle {
+    text-align: left;
+    font-weight: bold !important;
+  }
+
+  .ShoppingCartDetailedTile .cartDetailedDescription {
+    text-align: left;
+    font-size: var(--font-size-small);
+
+  }
+
+  .cartPrice {
+    float: right;
+    margin-right: '2%'
+  }
+
+  .ShoppingCartView .addToCart {
+    margin: 15px 15px 0px 15px;
+    text-transform: inherit;
+    color: #2F4FFF;
+    border: 1px solid #2F4FFF;
+  }
+
+  .ShoppingCartView .buyNow,
+  .CheckoutCartView .proceedToBuy {
+    margin: 15px 15px 0px 15px;
+    text-transform: inherit;
+    background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
+    color: white;
+    border: none;
+  }
+  
+
+  

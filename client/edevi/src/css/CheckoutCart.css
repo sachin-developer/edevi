@@ -1,0 +1,102 @@
+.CheckoutShoppingCartTile {
+    display: flex;
+    flex-direction: row;
+}
+
+.CheckoutShoppingCartTile .ShoppingCartDetailedTile {
+    max-width: 300px;
+    position: relative;
+}
+
+.CheckoutShoppingCartTile .ShoppingCartDetailedTile .AliasBook {
+    font-weight: bold;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.CheckoutShoppingCartTile .cartDetailedTitle {
+    display: inline-block;
+}
+
+.CheckoutShoppingCartTile .closeIcon {
+    float: right;
+    cursor: pointer;
+}
+
+.CheckoutShoppingCartTile .QuantityCard {
+    background: transparent;
+    padding-top: 3px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.CheckoutShoppingCartTile .cartPrice {
+    float: left;
+}
+
+.CheckoutShoppingCartTile .QuantityItem {
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+}
+
+.CheckoutShoppingCartTile .QuantityItem .QuantityForm {
+    padding: 0
+}
+
+.CheckoutCartView .proceedToBuy{
+    width: 95%;
+}
+/* Cart View*/
+
+.CheckoutCartView {
+    color: white;
+}
+
+.EmptyCircleView {
+    width:200px;
+    height:200px;
+    background-color: var(--header-toolbar-color);
+    border-radius: 50%;
+    margin:50px 50px 50px 100px;
+    
+}
+
+.EmptyCartView .EmptyCartTitle{
+  font-size: var(--font-size-large);
+  margin: 10px;
+
+} 
+.EmptyCartView .EmptyCartMessage{
+    font-size: var(--font-size-medium);
+    margin: 10px;
+
+} 
+.CheckoutCartView .EmptyCartView .ShowMeProducts{
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  color: var(--special-text-color);
+} 
+.CheckoutShoppingCartTile {
+    margin-bottom: 15px;
+}
+
+.LoadedCartView .TotalBottomBar {
+    margin: 10px;
+}
+
+.LoadedCartView .Total {
+    float: left
+}
+.LoadedCartView .TotalAmount {
+    float: right
+}
+
+.CheckoutCartView .cartDetailedTitle {
+    font-size: var(--font-size-medium);
+    opacity: 0.9;
+}
+
+

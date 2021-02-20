@@ -7,7 +7,8 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
-
+import SidePanel from './SidePanel';
+import Drawer from '@material-ui/core/Drawer';
 
 const useStyles = makeStyles((theme) => ({
     AppToolBar: {
@@ -50,6 +51,16 @@ function AppToolBarHeader (props) {
        props.data.history.push(route);
     }
 
+    const [showDrawer, setShowDrawer] = React.useState(false);
+    
+    const showSidePanel = () => {
+        setShowDrawer(true);
+    }
+
+    const hideSidePanel = () => {
+        setShowDrawer(false);
+    }
+
     return(
         <div> 
             <AppBar position="static" className={classes.AppToolBar}>
@@ -58,9 +69,16 @@ function AppToolBarHeader (props) {
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('Shop')}}>Shop</Button>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('Donate')}}>Donate</Button>
                     <Button className={classes.toolbarButton} onClick={()=>{setReditectState('About')}}>About</Button>
-                    <IconButton className={classes.hamburgerButton} edge="end" aria-label="menu" style={{marginLeft: 'auto'}} >
+                    <IconButton className={classes.hamburgerButton} edge="end" aria-label="menu" style={{marginLeft: 'auto'}} 
+                        onClick={showSidePanel}>
                         <MenuIcon />
                     </IconButton>
+                    <Drawer anchor={'right'} open={showDrawer} onClose={hideSidePanel} className={'SideDrawer'} >
+                        {showDrawer && (
+                            <SidePanel history ={props.data.history} showSidePanel={showSidePanel} hideSidePanel={hideSidePanel}/>
+                        )
+                        }
+                    </Drawer>
                 </Toolbar>
             </AppBar>
         </div>

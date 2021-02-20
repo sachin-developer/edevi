@@ -5,6 +5,8 @@ import ShoppingModule from './shop/ShoppingModule';
 import DonateModule from './donate/DonateModule';
 import AboutModule from './about/AboutModule'; 
 import ShoppingCartView from './shop/ShoppingCartView';
+import CheckoutCartView from './shop/CheckoutCartView';
+import Faq from './faq/Faq';
 
 class Routes extends Component {
 
@@ -20,6 +22,7 @@ class Routes extends Component {
                     <Route exact path='/' component={LandingPageModule}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
+                    <Route exact path='/shop/Checkout' component={CheckoutCartView}/>
                     <Route exact path='/shop/Temple' component={ShoppingCartView}/>
                     <Route exact path='/shop/Puja' component={ShoppingCartView}/>
                     <Route exact path='/shop/Fasting' component={ShoppingCartView}/>
@@ -27,6 +30,8 @@ class Routes extends Component {
 
                     <Route exact path='/donate' component={DonateModule}/>
                     <Route exact path='/about' component={AboutModule}/>
+                    <Route exact path='/faq' component={Faq}/>
+
                 </Switch>
           );
     }

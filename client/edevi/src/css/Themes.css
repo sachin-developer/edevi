@@ -2,6 +2,13 @@
     --bg-theme-color: #0D103B;   
     --header-toolbar-color: #252850;
     --toolbar-text-color: white;
+    --app-text-color: white;
     --toolbar-hamburger-color: white;
+    --special-text-color: #FEDC31;
     --title-text-color: white;
+    --font-size-large: 16px;
+    --font-size-xl: 18px;
+    --font-size-medium: 14px;
+    --font-size-small: 12px;
+    --shopitem-border-radius: 8px
 }

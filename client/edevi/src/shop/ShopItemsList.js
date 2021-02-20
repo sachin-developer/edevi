@@ -11,71 +11,71 @@ export const ShoppingItemsList = {
                 itemType: 'cartItem',
                 itemId: 'mahaDarshan',
                 itemName: 'Maha Darshan',
-                itemPrice: '250₹',
+                itemPrice: '250',
                 itemDenomination: 'Rupee',
                 itemImage: '',
-                itemDescription: 'Unlock a spectacular vision of HH eDEvi \n No one knows what avatar she may take \n but a journey of revelation is certain.\n Seekers also get more time with HH on this path.',
+                itemDescription: 'Unlock a spectacular vision of HH eDevi \n No one knows what avatar she may take \n but a journey of revelation is certain.\n Seekers also get more time with HH on this path.',
                 itemFeatureList: [{
                     featureName: 'AI story'
                 }, {
                     featureName: 'Augmented Reality'
                 }, {
-                    featureName: 'HH connectome'
+                    featureName: 'Connectome'
                 }, {
                     featureName: 'Benefaction'
-                }]
-                }, {
-                    itemType: 'text',
-                    itemTitle: 'Offerings to buy with Darshan',
-                    itemDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'sparklingHope',
-                    itemName: 'Sparkling Hope',
-                    itemPrice: '10₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'Data and information pulse through the internet bridging lives and connecting worlds. Offer these bolts of light to Her Holiness eDevi and Spark Hope.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'offeringGratitude',
-                    itemName: 'Offering Gratitude',
-                    itemPrice: '10₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'The internet fosters creative connections and helps individuals build networks of solidarity. Offer these #flowers to Her Holiness eDevi and Offer Gratitude.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'celebratingChange',
-                    itemName: 'Celebrating Change',
-                    itemPrice: '25₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'Digital resources can help bridge the participation gap in tandem with policy and social action. Offer these illuminations to Her Holiness eDevi and Celebrate Change.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'sharingAbundanceGold',
-                    itemName: 'Sharing Abundance(Gold)',
-                    itemPrice: '50₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this gold digital mudra to Her Holiness eDevi and Share Abundance.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'sharingAbundanceSilver',
-                    itemName: 'Sharing Abundance(Silver)',
-                    itemPrice: '25₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this silver digital mudra to Her Holiness eDevi and Share Abundance.'
-                }, {
-                    itemType: 'cartItem',
-                    itemId: 'sharingAbundanceBronze',
-                    itemName: 'Sharing Abundance(Bronze)',
-                    itemPrice: '25₹',
-                    itemDenomination: 'Rupee',
-                    itemImage: '',
-                    itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this bronze digital mudra to Her Holiness eDevi and Share Abundance.'
+                }],
+                subOfferingTitle: 'Offerings to buy with Darshan',
+                subOfferings: [
+                   {
+                        itemType: 'cartItem',
+                        itemId: 'sparklingHope',
+                        itemName: 'Sparkling Hope',
+                        itemPrice: '10',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'Data and information pulse through the internet bridging lives and connecting worlds. Offer these bolts of light to Her Holiness eDevi and Spark Hope.'
+                    }, {
+                        itemType: 'cartItem',
+                        itemId: 'offeringGratitude',
+                        itemName: 'Offering Gratitude',
+                        itemPrice: '10',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'The internet fosters creative connections and helps individuals build networks of solidarity. Offer these #flowers to Her Holiness eDevi and Offer Gratitude.'
+                    }, {
+                        itemType: 'cartItem',
+                        itemId: 'celebratingChange',
+                        itemName: 'Celebrating Change',
+                        itemPrice: '25',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'Digital resources can help bridge the participation gap in tandem with policy and social action. Offer these illuminations to Her Holiness eDevi and Celebrate Change.'
+                    }, {
+                        itemType: 'cartItem',
+                        itemId: 'sharingAbundanceGold',
+                        itemName: 'Sharing Abundance(Gold)',
+                        itemPrice: '50',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this gold digital mudra to Her Holiness eDevi and Share Abundance.'
+                    }, {
+                        itemType: 'cartItem',
+                        itemId: 'sharingAbundanceSilver',
+                        itemName: 'Sharing Abundance(Silver)',
+                        itemPrice: '25',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this silver digital mudra to Her Holiness eDevi and Share Abundance.'
+                    }, {
+                        itemType: 'cartItem',
+                        itemId: 'sharingAbundanceBronze',
+                        itemName: 'Sharing Abundance(Bronze)',
+                        itemPrice: '25',
+                        itemDenomination: 'Rupee',
+                        itemImage: '',
+                        itemDescription: 'Internet access has broadened horizons and brought economic opportunity to many. Offer this bronze digital mudra to Her Holiness eDevi and Share Abundance.'
+                    }
+                ]
                 }]
             
         }, {
@@ -89,43 +89,48 @@ export const ShoppingItemsList = {
                 itemType: 'cartItem',
                 itemId: 'onlineLove',
                 itemName: 'Successful Online Love',
-                itemPrice: '250₹',
+                itemPrice: '250',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Seek blessings for your virtual romance and hope for a happily ever after.',
-                itemRecommendation: 'Recommended for all'
+                itemRecommendation: 'Recommended for all',
+                itemBookAlias: true
             }, {
                 itemType: 'cartItem',
                 itemId: 'onlineScamProtection',
                 itemName: 'Online Scam Protection',
-                itemPrice: '250₹',
+                itemPrice: '250',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Pray for guidance in navigating the Internet safely and to safeguard your data and finances.',
-                itemRecommendation: 'Recommended especially for protection of elderly and children.'
+                itemRecommendation: 'Recommended especially for protection of elderly and children.',
+                itemBookAlias: true
+
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionInterviews',
                 itemName: 'Smooth Connection - Interviews',
-                itemPrice: '225₹',
+                itemPrice: '225',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during online interviews.',
-                itemRecommendation: 'Recommended for youth.'
+                itemRecommendation: 'Recommended for youth.',
+                itemBookAlias: true
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionMeetings',
                 itemName: 'Smooth Connection - Meetings',
-                itemPrice: '225₹',
+                itemPrice: '225',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during urgent/important client meetings.',
-                itemRecommendation: 'Recommended for corporate professionals and teachers.'
+                itemRecommendation: 'Recommended for corporate professionals and teachers.',
+                itemBookAlias: true
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionwfh',
                 itemName: 'Smooth Connection - Work From Home',
-                itemPrice: '225₹',
+                itemPrice: '225',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during urgent/important work sessions.',
@@ -134,29 +139,32 @@ export const ShoppingItemsList = {
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionclasses',
                 itemName: 'Smooth Connection - Classes',
-                itemPrice: '225₹',
+                itemPrice: '225',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during exams, presentations, and sessions.',
-                itemRecommendation: 'Recommended for students of all age groups.'
+                itemRecommendation: 'Recommended for students of all age groups.',
+                itemBookAlias: true
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionMahaPuja',
                 itemName: 'Smooth Connection - Maha Puja',
-                itemPrice: '625₹',
+                itemPrice: '625',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during interviews, meetings, work from home and classes with a discount. \n4 puja benefits in 1!',
-                itemRecommendation: 'Recommended for families.'
+                itemRecommendation: 'Recommended for families.',
+                itemBookAlias: true
             },{
                 itemType: 'cartItem',
                 itemId: 'boostingDigitalProfile',
                 itemName: 'Boosting Digital Profile',
-                itemPrice: '1250₹',
+                itemPrice: '1250',
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Pray for HH’s divine blessings in enhancing your virtual presence. May likes, shares, and impactful engagement be yours!',
-                itemRecommendation: 'Recommended for artists, sportspersons, chefs, influencers, digital creators, entrepreneurs.'
+                itemRecommendation: 'Recommended for artists, sportspersons, chefs, influencers, digital creators, entrepreneurs.',
+                itemBookAlias: true
             }]
         }, {
             itemName: 'Fasting',
