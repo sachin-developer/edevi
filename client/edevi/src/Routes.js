@@ -6,6 +6,7 @@ import DonateModule from './donate/DonateModule';
 import AboutModule from './about/AboutModule'; 
 import ShoppingCartView from './shop/ShoppingCartView';
 import CheckoutCartView from './shop/CheckoutCartView';
+import GlitchScreen from './temple/GlitchScreen';
 import Faq from './faq/Faq';
 
 class Routes extends Component {
@@ -20,7 +21,9 @@ class Routes extends Component {
         return (
                 <Switch>
                     <Route exact path='/' component={LandingPageModule}/>
+                    <Route exact path='/Glitch' component={GlitchScreen}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
+                    <Route exact path='/temple/Glitch' component={GlitchScreen}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
                     <Route exact path='/shop/Checkout' component={CheckoutCartView}/>
                     <Route exact path='/shop/Temple' component={ShoppingCartView}/>

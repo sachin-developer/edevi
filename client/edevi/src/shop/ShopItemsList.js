@@ -134,7 +134,8 @@ export const ShoppingItemsList = {
                 itemDenomination: 'Rupee',
                 itemImage: '',
                 itemDescription: 'Secure some divine influence so that your screen doesn’t freeze during urgent/important work sessions.',
-                itemRecommendation: 'Recommended for corporate professionals, teachers, artists, doctors, free-lancers, consultants.'
+                itemRecommendation: 'Recommended for corporate professionals, teachers, artists, doctors, free-lancers, consultants.',
+                itemBookAlias: true
             },{
                 itemType: 'cartItem',
                 itemId: 'smoothConnectionclasses',
@@ -182,6 +183,22 @@ export const ShoppingItemsList = {
             itemDescription: 'Sacred art to adorn your Internet profiles',
             buttonColor: '',
             itemCartView: []
+        }
+    ],
+    freeItems:[{
+            itemType: 'cartItem',
+            itemId: 'walkInDarshan',
+            itemName: 'Walk-in Darshan',
+            itemPrice: 'FREE',
+            itemFree: true,
+            itemDenomination: 'Rupee',
+            itemImage: '',
+            itemDescription: 'The image of HH adorns her abode at all times. The temple is open 24*7. The omnipresent one accepts offerings and blesses all who come in. HH’s manifestation Aarti is daily 9:00 AM/PM IST for 1 hour.',
+            itemFeatureList: [{
+                featureName: 'AI story'
+            }, {
+                featureName: 'VHH eDevi idol'
+            }]
         }
     ]
 }

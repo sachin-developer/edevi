@@ -70,7 +70,7 @@ function Recommendation({shoppingItem}) {
 function FeatureListTile({shoppingItem}) {
     const classes = useStyles();
     return (
-      <GridList cellHeight={'auto'} className={classes.cartFeaureList} cols={2} >
+      <GridList cellHeight={'auto'} className={'cartFeatureList'} cols={2} >
       {
           shoppingItem.itemFeatureList.map((feaureItem)=> (
           <GridListTile className='featureGridListTile' key={feaureItem.featureName}>
@@ -139,6 +139,16 @@ function QuantityTile ({setItemQuantity, quantity}) {
     )
 }
 
+
+function ShoppingTileButton({showBuyNow, addToCart}) {
+    return (
+        <div>
+            <Button variant='outlined' className={'addToCart'} onClick={addToCart}>Add to cart</Button>
+            {showBuyNow !== false && <Button variant='outlined' className={'buyNow'}>Buy Now</Button>}
+        </div>
+    );
+}
+
 /*
     Adding to cart will always be of the format {
         itemId:<>,
@@ -148,7 +158,7 @@ function QuantityTile ({setItemQuantity, quantity}) {
         aliasName: <> // Valid only for Puja Usecases
     }
 */
-function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart}) {
+function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton}) {
     const classes = useStyles();
     let gridClassName = size === 'Large' ? 'largeShoppingCartGridListTile' : 'smallShoppingCartGridListTile';
     const [aliasName, setAliasName] = React.useState('');
@@ -194,12 +204,19 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart}) {
                 }                         
             </div>
             <Divider />
-            <Card className={classes.quantityCard} variant="outlined">
-                <QuantityTile quantity={quantity} setItemQuantity={setItemQuantity}/>
-            </Card>
+            {
+                shoppingItem.itemPrice !== 'FREE' &&    
+                (
+                    <Card className={classes.quantityCard} variant="outlined">
+                    <QuantityTile quantity={quantity} setItemQuantity={setItemQuantity}/>
+                    </Card>
+                )
+            }
+
             <div className={classes.buttonContainer}>
-                <Button variant='outlined' className={'addToCart'} onClick={addToCart}>Add to cart</Button>
-                {showBuyNow !== false && <Button variant='outlined' className={'buyNow'}>Buy Now</Button>}
+                {
+                    ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} onAddToCart={addToCart}/>
+                }
             </div>
           </Paper>
       </div>
