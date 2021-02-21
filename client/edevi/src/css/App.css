@@ -76,7 +76,7 @@ body {
   font-family: 'Lora, Italic';
 }
 
-.LandingPageModule .EnterTempleButton {
+.LandingPageModule .EnterTempleButton  {
     background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
     position: absolute;
     bottom: 10%;
@@ -89,9 +89,82 @@ body {
     font-family: 'Open Sans bold'
 }
 
+.GlitchScreen {
+  height: 100%;
+  color: white;
+}
+
 /* Glitch Screen */
 .GlitchScreen .GlitchBackground{
-  background-image: url('../images/LandingBackground.png');
+  height: 40%;
+  background-image: url('../images/Cat_welcome.png');
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.GlitchScreen .CodeFormLabel {
+  text-align: center;
+  font-size: var(--font-family-large);
+  font-family: 'Open Sans Regular'
+}
+
+.GlitchScreen .GlitchTitle {
+  font-size: 24px;
+  font-family: 'Lora,Regular';
+  opacity: 0.9;
+  margin: 19px;
+}
+
+.GlitchScreen .GlitchDescription {
+  margin: 19px;
+  font-size: var(--font-family-large);
+  font-family: 'Open Sans Regular';
+}
+
+.GlitchScreen .CodeFormText {
+  border-color: white;
+  margin: 10px;
+  width: 50%;
+}
+
+.GlitchScreen .FormControls {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.GlitchScreen .GlitchRedirect {
+  font-size: 24px;
+  opacity: 0.9;
+  margin: 19px;
+}
+
+.GlitchScreen .CodeFormText fieldset,
+.GlitchScreen .CodeFormText label {
+  border-color: var(--text-variant-color);
+  color: var(--text-variant-color);
+}
+
+.GlitchScreen .CodeContinue {
+  background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
+  color: white;
+  text-transform: none;
+  font-size: var(--font-size-large);
+  font-family: 'Open Sans bold';
+  margin: 10px;
+  width: 50%;
+}
+
+.GlitchScreen .WalkInDarshanButton {
+  background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
+  color: white;
+  text-transform: none;
+  font-size: var(--font-size-large);
+  font-family: 'Open Sans bold';
+  width: 90%;
+  margin: 10px;
+}
+
+.GlitchScreen .cartFeatureList {
+  padding-bottom: 5px;
+}
+
