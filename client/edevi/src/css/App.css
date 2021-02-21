@@ -10,13 +10,11 @@ body {
 .App {
   /* text-align: center; */
   background: var(--bg-theme-color);
+  height: 100%;
 }
 
-.AppBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.App .AppStateHandler {
+  height: calc(100vh - 64px);
 }
 
 .App-logo {
@@ -43,4 +41,57 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+/* Landing page Module*/
+
+.LandingPageModule {
+    color: white;
+    height: 100%;
+    background-image: url('../images/LandingBackground.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.LandingPageModule .AppLogoImage {
+  width:100px;
+  height: 100px;
+  position: absolute;
+  top: calc(40%);
+  left: calc(40%);
+}
+
+
+.LandingPageModule .landingPageHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 32px;
+  opacity: 0.8;
+  font-family: 'Lora, Italic';
+}
+
+.LandingPageModule .EnterTempleButton {
+    background-image: linear-gradient(263deg, #0A95FB 0%, #2F4FFF 50%, #0A13F8 100%);
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    /* left: 40%; */
+    width: 80%;
+    left: 10%;
+    text-transform: none;
+    font-size: var(--font-size-large);
+    font-family: 'Open Sans bold'
+}
+
+/* Glitch Screen */
+.GlitchScreen .GlitchBackground{
+  background-image: url('../images/LandingBackground.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -16,7 +16,7 @@ class AppStateHandler extends Component {
 
     render() {
         return (
-            <div>
+            <div className='AppStateHandler'>
                 <AppToolBarHeader data={{history: this.props.history}}/>
                 <div className="AppBody">
                     <Routes />
