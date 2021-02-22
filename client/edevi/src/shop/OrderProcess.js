@@ -1,37 +1,36 @@
 import React, { Component } from "react";
+import ShoppingCartUtils from './ShoppingCartUtils';
 
 
 
 function OrderProcess(props) {
- 
-    const itemDetails = [];
-    let totalAmout = 1400;
-    let serverPayLoad = JSON.stringify({itemDetails, totalAmout});
+    let itemDetails = ShoppingCartUtils.getLocalStorageItems();
+    let totalAmount = ShoppingCartUtils.getCartPrice();
+    let serverPayLoad = JSON.stringify({itemDetails, totalAmount});
     let [orderId, setOrderId] = React.useState(null);
-    // props.handleRequestToServer({
-    //     onSuccessHandler: (response) => {orderId(response)},
-    //     methodType: 'POST',
-    //     endPoint: 'orderIdFetch',
-    //     data: serverPayLoad,
-    // })
-    orderId=100;
+    props.handleRequestToServer({
+        onSuccessHandler: (response) => {orderId(response)},
+        methodType: 'POST',
+        endPoint: 'orderIdFetch',
+        data: serverPayLoad,
+    })
     if (orderId !== null) {
         var options = {
             "key": "", // Enter the Key ID generated from the Dashboard
-            "amount": totalAmout, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "amount": totalAmount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             "currency": "INR",
-            "name": "Acme Corp",
-            "description": "Test Transaction",
-            "image": "https://example.com/your_logo",
-            "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+            "name": "EDevi",
+            "description": "",
+            // "image": "https://example.com/your_logo",
+            "order_id": orderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/", // Route to success page
             "prefill": {
                 "name": "",
                 "email": "",
                 "contact": ""
             },
             "notes": {
-                "address": "Razorpay Corporate Office"
+                "address": ""
             },
             "theme": {
                 "color": "#3399cc"

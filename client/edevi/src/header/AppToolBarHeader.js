@@ -48,7 +48,7 @@ function AppToolBarHeader (props) {
     const classes = useStyles();
 
     const setReditectState = (route) => {
-       props.data.history.push(route);
+       props.data.history.push('/' + route);
     }
 
     const [showDrawer, setShowDrawer] = React.useState(false);

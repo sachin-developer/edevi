@@ -179,7 +179,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
     return (
         <div key={shoppingItem.itemId} className={gridClassName}>
           <img className={'shoppingCartImg'} src={shoppingPlaceHolderitem} alt={shoppingItem.itemTitle} />
-          <Paper className={'ShoppingCartDetailedTile'}>
+            <Paper className={'ShoppingCartDetailedTile'}>
             <Typography className={'cartDetailedTitle'}>
                 {shoppingItem.itemName}
                 <span className={'cartPrice'}>{"₹ " + shoppingItem.itemPrice}</span>
