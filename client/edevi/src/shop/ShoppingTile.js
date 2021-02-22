@@ -166,6 +166,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
     // const [price, setItemPrice] = React.useState(shoppingItem.itemPrice);
 
     const addToCart = () => {
+        debugger;
         ShoppingCartUtils.addToCart({
             itemId: shoppingItem.itemId,
             quantity,
@@ -215,7 +216,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
 
             <div className={classes.buttonContainer}>
                 {
-                    ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} onAddToCart={addToCart}/>
+                    ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} addToCart={addToCart}/>
                 }
             </div>
           </Paper>
