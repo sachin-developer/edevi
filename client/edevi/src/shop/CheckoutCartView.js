@@ -81,7 +81,9 @@ function LoadedCartView ({setCurrentView}) {
     setLoading(true);
     setMessage(null);
     try {
-      const body = { amount: parseInt(777, 10) };
+      let itemDetails = ShoppingCartUtils.getLocalStorageItems();
+      let totalAmount = ShoppingCartUtils.getCartPrice();
+      const body = { itemDetails, amount: totalAmount };
       const reqOptions = { timeout: 30000 };
       const response = await axios.post('https://fast-shore-71647.herokuapp.com/api/razorpay', body, reqOptions);
 
