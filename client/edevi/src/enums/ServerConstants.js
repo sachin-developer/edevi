@@ -1,9 +1,11 @@
 // Define at one place so it's easy to swap in production env.
 const urlBase = 'http://localhost:5000';
+const dbBase = ' https://fast-shore-71647.herokuapp.com';
+
 
 const serverConstants = {
-    orderIdFetch: urlBase + '/api/razorpay',
-    paymentCodeVerification: urlBase + '/api/codeverification'
+    orderIdFetch: dbBase + '/api/razorpay',
+    paymentCodeVerification: dbBase + '/api/codeverification'
 };
 
 module.exports = {
