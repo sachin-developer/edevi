@@ -8,6 +8,7 @@ import ShoppingCartView from './shop/ShoppingCartView';
 import CheckoutCartView from './shop/CheckoutCartView';
 import GlitchScreen from './temple/GlitchScreen';
 import Faq from './faq/Faq';
+import PledgeScreen from './temple/PledgeScreen';
 
 class Routes extends Component {
 
@@ -18,10 +19,12 @@ class Routes extends Component {
     }
 
     render() {
+        // TOOD: Block Pledge route if user is not validated
         return (
                 <Switch>
                     <Route exact path='/' component={LandingPageModule}/>
                     <Route exact path='/Glitch' component={GlitchScreen}/>
+                    <Route exact path='/Glitch/Pledge' component={PledgeScreen}/>
                     <Route exact path='/temple' component={LandingPageModule}/>
                     <Route exact path='/temple/Glitch' component={GlitchScreen}/>
                     <Route exact path='/shop' component={ShoppingModule}/>
