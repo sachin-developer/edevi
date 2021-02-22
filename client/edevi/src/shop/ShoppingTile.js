@@ -166,7 +166,6 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
     // const [price, setItemPrice] = React.useState(shoppingItem.itemPrice);
 
     const addToCart = () => {
-        debugger;
         ShoppingCartUtils.addToCart({
             itemId: shoppingItem.itemId,
             quantity,
