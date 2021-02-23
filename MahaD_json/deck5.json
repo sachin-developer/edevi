@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "Text": "You, me and the Internet",
+      "allign":"centre",
+      "image": "none",
+      "bg-color": ""
+    },
+    {
+        "id": 2,
+        "Text": "The Internet needs \n More of you and me \n How many tongues?  \n Do we speak? \n Does AI know what your ancestors felt?",
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 3,
+        "Text": "Can bots translate  -\n The taste at the tip of a tongue? \n The fragrance of a wildflower? \n The caress of wrinkled hands? \n Tears of joy; ripples of laughter?"
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 4,
+        "Text": "The Internet needs \n More of you and me \n How many hands? \n Hold us afloat? \n Does AI know how compassion feels? \n Can bots heal? ",
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 5,
+        "Text": "Hold us up! \n Hold us in! ",
+        "allign":"bottom",
+        "image": "relationship_1.png",
+        "bg-color": ""
+    },
+    {
+        "id": 6,
+        "Text": "Hold us down ! \n Don't ask us what's wrong . \n Don't ask us what's right.",
+        "allign":"centre",
+        "image": "",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "Hold us up.\n Hold us down. \n Keep us down. \n Don't ask us what's wrong. \n Don't ask us what's right",
+        "allign":"centre",
+        "image": "arts_31",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": "Hold us up. \n Hold us down. \n Don't ask us what's new. \n Don't tell us what is out there. ",
+        "allign":"bottom",
+        "image": "AH (77).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 9,
+        "Text": "THINK: Can “a pen, a book, and a teacher” change the world? ",
+        "allign":"centre",
+        "image": "",
+        "bg-color": ""
+    }
+]

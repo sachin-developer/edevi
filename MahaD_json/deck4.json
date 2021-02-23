@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "Text": "You, me and the Internet",
+      "allign":"centre",
+      "image": "none",
+      "bg-color": ""
+    },
+    {
+        "id": 2,
+        "Text": "The Internet needs \n More of you and me \n How many tongues?  \n Do we speak? \n Does AI know what your ancestors felt?",
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 3,
+        "Text": "Can bots translate  -\n The taste at the tip of a tongue? \n The fragrance of a wildflower? \n The caress of wrinkled hands? \n Tears of joy; ripples of laughter?"
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 4,
+        "Text": "The Internet needs \n More of you and me \n How many hands? \n Hold us afloat? \n Does AI know how compassion feels? \n Can bots heal? ",
+        "allign":"centre",
+        "image": "none",
+        "bg-color": ""
+    },
+    {
+        "id": 5,
+        "Text": "Can anyone live without a mother?",
+        "allign":"bottom",
+        "image": "AH (37).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 6,
+        "Text": "Is there anyone left to protect another human from a cruel fate? \n Is there anyone left to nurture a child in time?",
+        "allign":"botttom",
+        "image": "AH (90).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "Is there anyone left to protect and nurture another? -\n For the future and the past, for the present and the future",
+        "allign":"bottom",
+        "image": "positive_25.png",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": " To the left, to the right, to the inside and the outside \n To all of you, keep your hands in reach to help",
+        "allign":"bottom",
+        "image": "AH (92).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 9,
+        "Text": " DO: Don’t give to feel better. Do it as you too receive.",
+        "allign":"centre",
+        "image": "",
+        "bg-color": ""
+    },
+]
