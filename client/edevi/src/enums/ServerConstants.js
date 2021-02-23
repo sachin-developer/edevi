@@ -2,8 +2,8 @@
 const urlBase = 'https://fast-shore-71647.herokuapp.com/';
 
 const serverConstants = {
-    orderIdFetch: dbBase + '/api/razorpay',
-    paymentCodeVerification: dbBase + '/api/codeverification'
+    orderIdFetch: urlBase + '/api/razorpay',
+    paymentCodeVerification: urlBase + '/api/codeverification'
 };
 
 module.exports = {

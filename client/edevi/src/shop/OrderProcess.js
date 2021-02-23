@@ -10,7 +10,6 @@ function OrderProcess(props) {
     let [orderId, setOrderId] = React.useState(null);
 
     function onSuccess(response) {
-        debugger;
     }
 
 
