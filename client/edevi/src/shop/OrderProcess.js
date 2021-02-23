@@ -14,7 +14,7 @@ function OrderProcess(props) {
 
 
     props.handleRequestToServer({
-        onSuccessHandler: (response) => {onSuccess},
+        onSuccessHandler: (response) => onSuccess,
         methodType: 'POST',
         endPoint: 'orderIdFetch',
         data: serverPayLoad,
