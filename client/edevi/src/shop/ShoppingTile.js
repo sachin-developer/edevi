@@ -215,7 +215,7 @@ function ShoppingTile({shoppingItem, size, showBuyNow, onAddToCart, ActionButton
 
             <div className={classes.buttonContainer}>
                 {
-                    ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} onAddToCart={addToCart}/>
+                    ActionButton ? <ActionButton /> : <ShoppingTileButton showBuyNow={showBuyNow} addToCart={addToCart}/>
                 }
             </div>
           </Paper>
