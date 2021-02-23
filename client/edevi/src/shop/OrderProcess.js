@@ -8,8 +8,13 @@ function OrderProcess(props) {
     let totalAmount = ShoppingCartUtils.getCartPrice();
     let serverPayLoad = JSON.stringify({itemDetails, totalAmount});
     let [orderId, setOrderId] = React.useState(null);
+
+    function onSuccess(response) {
+    }
+
+
     props.handleRequestToServer({
-        onSuccessHandler: (response) => {orderId(response)},
+        onSuccessHandler: (response) => {onSuccess},
         methodType: 'POST',
         endPoint: 'orderIdFetch',
         data: serverPayLoad,
