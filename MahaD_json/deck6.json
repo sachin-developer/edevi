@@ -3,14 +3,14 @@
       "id": 1,
       "Text": "With love, Ajji",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#5f635f"
     },
     {
         "id": 2,
         "Text": "It was under the ‘sampige’ - \n The fragrant champa tree ",
         "allign":"centre",
-        "image": "AH (94).jpg",
+        "image": "AH (94).mp4",
         "bg-color": ""
     },
     {
@@ -24,14 +24,14 @@
         "id": 4,
         "Text": "All along I’d ask her - \n Neer dosa? Allugeda? Bhaath? \n She’d simply shrug \n Smiling indulgently ",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     },
     {
         "id": 5,
         "Text": "Lunch was a glorious affair \n My joyous feet dangling",
         "allign":"center",
-        "image": "AH (2).jpg",
+        "image": "AH (2).mp4",
         "bg-color": ""
     },
     {
@@ -45,21 +45,21 @@
         "id": 7,
         "Text": "Mysore Pak needs \n 2 Tbsp water \n 1 for milk and 1 for oil \n Pinch for turmeric, double for NaHCO3 ",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     },
     {
         "id": 8,
         "Text": "The whole recipe \n Next steps, videos \n Even Ajji’s jokes \n Are now online to see. ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     },
     {
         "id": 9,
         "Text": "THINK: Is serving others a sacrifice? Can it be about sharing? ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     }
 ]

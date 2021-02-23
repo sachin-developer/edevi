@@ -3,22 +3,22 @@
       "id": 1,
       "Text": "You, me and the Internet",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#7e8386"
     },
     {
         "id": 2,
         "Text": "The Internet needs\n More of you and me\n How many tongues?\n Do we speak?",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#7e8386"
     },
     {
         "id": 3,
         "Text": "Does AI know what your ancestors felt? \n Can bots translate! \n The taste at the tip of a tongue? \n The fragrance of a wildflower?",
         "allign":"bottom",
-        "image": "divine_s_-18.jpg",
-        "bg-color": "none"
+        "image": "divine_s_-18.mp4",
+        "bg-color": ""
     },
     {
         "id": 4,
@@ -31,15 +31,15 @@
         "id": 5,
         "Text": "Can bots heal? \n More of you and me \n How many eyes? \n Are we the eyes you see? \n Can bots see? \n What is in my head? \n Why do I cry?",
         "allign":"bottom",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#7e8386"
     },
     {
         "id": 6,
         "Text": "Does AI eat? \n More of you and me \n How many bodies? \n Should we be so lucky? \n How many hearts? \n Can bots feel \n Can they read?",
         "allign":"center",
-        "image": "AH (12).jpg",
-        "bg-color": ""
+        "image": "AH (12).mp4",
+        "bg-color": "#7e8386"
     },
     {
         "id": 7,
@@ -52,7 +52,7 @@
         "id": 8,
         "Text": "THINK: Machines can’t show kindness.Humans can.",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#7e8386"
     }
 ]

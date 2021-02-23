@@ -1,0 +1,52 @@
+[
+
+    {
+      "id": 1,
+      "Text": "Memories on Cloud",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#9c9395"
+    },
+    {
+        "id": 2,
+        "Text": "Shoeboxes are no longer in vogue \n Not even tins with bright paint  \n Memories are uploaded - \n On drives, phones, desktops.",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#9c9395"
+    },
+    {
+        "id": 3,
+        "Text": "These things that need preserving \n Do they know they are to be rescued? \n What museum would keep these? \n Traces of youth, proofs of living"
+        "allign":"center",
+        "image": "",
+        "bg-color": "#9c9395"
+    },
+    {
+        "id": 4,
+        "Text": "Not data, not evidence \n … but memories! \n Of children’s laughter  \n And stories under seas of stars. \n Tiny pieces of me are still alive here.",
+        "allign":"top",
+        "image": "mind_12.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 5,
+        "Text": "A place of sadness and joy - \n Where my voice is heard more than the radio \n I see in the darkness. \n I cannot find my way home because it's not here \n My family are gone, gone",
+        "allign":"bottom",
+        "image": "divine_s_-17.jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 6,
+        "Text": "But if you're brave, you'll find me again \n I cannot find my way home because it's not here.",
+        "allign":"top",
+        "image": "Faith_15.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "THINK: It is not a donation. It is called making a difference.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#9c9395"
+    }
+]

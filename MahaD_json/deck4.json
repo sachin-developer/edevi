@@ -3,29 +3,29 @@
       "id": 1,
       "Text": "You, me and the Internet",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#6a5e53"
     },
     {
         "id": 2,
         "Text": "The Internet needs \n More of you and me \n How many tongues?  \n Do we speak? \n Does AI know what your ancestors felt?",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#6a5e53"
     },
     {
         "id": 3,
         "Text": "Can bots translate  -\n The taste at the tip of a tongue? \n The fragrance of a wildflower? \n The caress of wrinkled hands? \n Tears of joy; ripples of laughter?"
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#6a5e53"
     },
     {
         "id": 4,
         "Text": "The Internet needs \n More of you and me \n How many hands? \n Hold us afloat? \n Does AI know how compassion feels? \n Can bots heal? ",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#6a5e53"
     },
     {
         "id": 5,
@@ -38,14 +38,14 @@
         "id": 6,
         "Text": "Is there anyone left to protect another human from a cruel fate? \n Is there anyone left to nurture a child in time?",
         "allign":"botttom",
-        "image": "AH (90).jpg",
+        "image": "AH (90).mp4",
         "bg-color": ""
     },
     {
         "id": 7,
         "Text": "Is there anyone left to protect and nurture another? -\n For the future and the past, for the present and the future",
         "allign":"bottom",
-        "image": "positive_25.png",
+        "image": "positive_25.mp4",
         "bg-color": ""
     },
     {
@@ -60,6 +60,6 @@
         "Text": " DO: Don’t give to feel better. Do it as you too receive.",
         "allign":"centre",
         "image": "",
-        "bg-color": ""
+        "bg-color": "#6a5e53"
     },
 ]

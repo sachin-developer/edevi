@@ -3,29 +3,29 @@
       "id": 1,
       "Text": "You, me and the Internet",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#99939a"
     },
     {
         "id": 2,
         "Text": "The Internet needs \n More of you and me \n How many tongues?  \n Do we speak? \n Does AI know what your ancestors felt?",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#99939a"
     },
     {
         "id": 3,
         "Text": "Can bots translate  -\n The taste at the tip of a tongue? \n The fragrance of a wildflower? \n The caress of wrinkled hands? \n Tears of joy; ripples of laughter?"
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#99939a"
     },
     {
         "id": 4,
         "Text": "The Internet needs \n More of you and me \n How many hands? \n Hold us afloat? \n Does AI know how compassion feels? \n Can bots heal? ",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#99939a"
     },
     {
         "id": 5,
@@ -38,21 +38,23 @@
         "id": 6,
         "Text": "The sea is \n A little bit higher. \n And in an instant \n The sea will Turn back.",
         "allign":"botttom",
-        "image": "god_5.png",
+        "image": "god_5.mp4",
         "bg-color": ""
     },
     {
         "id": 7,
         "Text": "That makes \n It look like we're falling. \n I hope I'm Correct",
         "allign":"centre",
-        "image": "none",
+        "image": "",
+        "bg-color": "#99939a"
         "bg-color": ""
     },
     {
         "id": 8,
         "Text": "THINK: Change begins when one candle lights another. ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#99939a"
+
     }
 ]

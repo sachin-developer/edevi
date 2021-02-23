@@ -3,14 +3,14 @@
       "id": 1,
       "Text": "With love, Ajji",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#5f635f"
     },
     {
         "id": 2,
         "Text": "It was under the ‘sampige’ - \n The fragrant champa tree\n That I waited for Ajji \n To walk me home. \n All along I’d ask her - \n Neer dosa? Allugeda? Bhaath? \n She’d simply shrug \n Smiling indulgently",
-        "allign":"centre",
-        "image": "AH (94).jpg",
+        "allign":"",
+        "image": "AH (94).mp4",
         "bg-color": ""
     },
     {
@@ -18,7 +18,7 @@
         "Text": "All along I’d ask her - \n Neer dosa? Allugeda? Bhaath? \n She’d simply shrug \n Smiling indulgently. \n Lunch was a glorious affair  "
         "allign":"centre",
         "image": "",
-        "bg-color": ""
+        "bg-color": "#5f635f"
     },
     {
         "id": 4,
@@ -32,34 +32,34 @@
         "Text": "Next steps, videos. \n Even Ajji’s jokes. \n Are now online to see",
         "allign":"centre",
         "image": "",
-        "bg-color": ""
+        "bg-color": "#5f635f"
     },
     {
         "id": 6,
         "Text": "It is a happy story. \n I am glad I'm on the same wavelength. \n If it's not, let's find another path.",
         "allign":"bottom",
-        "image": "AH (51).jpg",
+        "image": "AH (51).mp4",
         "bg-color": ""
     },
     {
         "id": 7,
         "Text": "I am hungry with longing. \n It's all around me. \n This is Ajji’s world. \n To me, it's all there is",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     },
     {
         "id": 8,
         "Text": "When the hunger gets too much. \n No, it should be just a meal. \n To be eaten. \n I wish I was in Ajji’s world",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     },
     {
         "id": 9,
         "Text": "DO: Simple Math: Helping someone adds to joy! ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#5f635f"
     }
 ]

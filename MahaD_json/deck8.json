@@ -3,35 +3,35 @@
       "id": 1,
       "Text": "With love, Ajji",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#a88c71"
     },
     {
         "id": 2,
         "Text": "It was under the ‘sampige’ - \n The fragrant champa tree\n That I waited for Ajji \n To walk me home. \n All along I’d ask her - \n Neer dosa? Allugeda? Bhaath? \n She’d simply shrug \n Smiling indulgently",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#a88c71"
     },
     {
         "id": 3,
         "Text": "Lunch was a glorious affair \n My joyous feet dangling. \n Eyes hungry, mouth watering. \n Awaiting Ajji’s spread  "
         "allign":"centre",
-        "image": "A.jpg",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#a88c71"
     },
     {
         "id": 4,
         "Text": "Next steps, videos. \n Even Ajji’s jokes. \n Are now online to see. ",
         "allign":"center",
         "image": "",
-        "bg-color": ""
+        "bg-color": "#a88c71"
     },
     {
         "id": 5,
         "Text": "Innocent, \n But still so much to learn. \n But then that's exactly what makes us human.\n You're like a butterfly. \n With wings",
         "allign":"top",
-        "image": "hope_36.png",
+        "image": "hope_36.mp4",
         "bg-color": ""
     },
     {
@@ -45,14 +45,14 @@
         "id": 7,
         "Text": "And you can't see it because its not there. \n But who cares if we can? \n You're a dream within a dream ",
         "allign":"center",
-        "image": "divine_s_-35.jpg",
+        "image": "divine_s_-35.mp4",
         "bg-color": ""
     },
     {
         "id": 8,
         "Text": "THINK: YOLO! Why limit yourself? You can transform many lives. ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#a88c71"
     }
 ]

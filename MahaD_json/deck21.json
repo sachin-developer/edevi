@@ -1,0 +1,59 @@
+[
+
+    {
+      "id": 1,
+      "Text": "In Memoriam Kerala Girl",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#867872"
+    },
+    {
+        "id": 2,
+        "Text": "14. Dalit. Girl. Missing since 4 PM. \n Kerosene doused. Ablaze.  \n Bright student. Fading star. \n Receding from public memory. \n Dead!",
+        "allign":"bottom",
+        "image": "education_11.png",
+        "bg-color": ""
+    },
+    {
+        "id": 3,
+        "Text": "Devika your TV set could not be repaired \n Your father lost his job as an agricultural hand \n They didn’t own a mobile or table"
+        "allign":"center",
+        "image": "",
+        "bg-color": "#867872"
+    },
+    {
+        "id": 4,
+        "Text": "“Do-gooders please donate funds, old phones, and computers \n 321 million students must attend class",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#867872"
+    },
+    {
+        "id": 5,
+        "Text": "The girl's family has asked for donations to help find her, saying she was a bright student with the same dream as her parents ",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#867872"
+    },
+    {
+        "id": 6,
+        "Text": "‧Her family has not confirmed that she's alive. But, they have released pictures of the missing girl, saying she appears to be in good health and has a bright future.",
+        "allign":"bottom",
+        "image": "AH (18).mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "The family is urging the public for help to find the missing girl, who went missing from her home in the village of Bhatkal, Jharkhand on",
+        "allign":"top",
+        "image": "PP (102).mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": "THINK: There are billions still who’ve never made a phone call.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#867872"
+    }
+]

@@ -3,28 +3,28 @@
       "id": 1,
       "Text": "With love, Ajji",
       "allign":"centre",
-      "image": "none",
-      "bg-color": ""
+      "image": "",
+      "bg-color": "#456673"
     },
     {
         "id": 2,
         "Text": "It was under the ‘sampige’ - \n The fragrant champa tree\n That I waited for Ajji \n To walk me home. \n All along I’d ask her - \n Neer dosa? Allugeda? Bhaath? \n She’d simply shrug \n Smiling indulgently",
         "allign":"centre",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#456673"
     },
     {
         "id": 3,
         "Text": "Lunch was a glorious affair \n My joyous feet dangling. \n Eyes hungry, mouth watering. \n Awaiting Ajji’s spread \n “Dear netizens, \n It’s simply 1-2-3  \n 100 gm chickpea flour 200 sugar, 300 ghee "
         "allign":"centre",
-        "image": "A.jpg",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#456673"
     },
     {
         "id": 4,
         "Text": "And I hope this song can give you a sense of what I feel. \n It may help you appreciate what life is really like. \n And remember, \n Life is a dance ",
         "allign":"bottom",
-        "image": "divine_s_-12.jpg",
+        "image": "divine_s_-12.mp4",
         "bg-color": ""
     },
     {
@@ -38,14 +38,14 @@
         "id": 6,
         "Text": "A song I've danced to for so long. \n I hope to dance",
         "allign":"center",
-        "image": "divine_s_-6.jpg",
+        "image": "divine_s_-6.mp4",
         "bg-color": ""
     },
     {
         "id": 7,
         "Text": "THINK: What did you do today? Step-up or step-away? ",
         "allign":"center",
-        "image": "none",
-        "bg-color": ""
+        "image": "",
+        "bg-color": "#456673"
     }
 ]
