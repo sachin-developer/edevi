@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Button from '@material-ui/core/Button';
 import OrderProcess from './OrderProcess';
-import WithServerRequestRespone from '../hoc/withServerRequestRespone';
+import WithServerRequestRespone from '../hoc/WithServerRequestRespone';
 import ShoppingCartUtils from './ShoppingCartUtils';
 import CheckoutShoppingTile from './CheckoutShoppingTile';
 /* eslint-disable camelcase */
@@ -16,6 +16,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
+import { ToastContainer, toast } from 'react-toastify';
 
 const defaultInputForm = {
     amount: '',
@@ -59,21 +60,21 @@ function TotalBottomBar() {
     )
 }
 
-function LoadedCartView ({setCurrentView}) {
-    const classes = useStyles();
-  const [message, setMessage] = useState(null);
+function LoadedCartView ({setCurrentView, setMessage}) {
+  const classes = useStyles();
   const [loading, setLoading] = useState(false);
   const [inputForm, setInputForm] = useState(defaultInputForm);
-
   const handleVerifyResponse = async (response, razorpay_order_id) => {
     const { razorpay_payment_id, razorpay_signature } = response;
     const secret = 'mD2yYFk4gxox9pFKT2QL7QVZ';
     const generated_signature = HmacSHA256(`${razorpay_order_id}|${razorpay_payment_id}`, secret).toString(CryptoJS.enc.Hex);
     if (generated_signature === razorpay_signature) {
       await axios.post('https://fast-shore-71647.herokuapp.com/api/payments', response, { timeout: 20000 });
-      setMessage('Successful');
+      toast.success('Your Payment was Successful');
+      setMessage('success');
     } else {
-      setMessage('Unsuccessful');
+      toast.error('Sorry, something went wrong while verifying payment. Please contact us for more help.');
+      setMessage('fail');
     }
   };
 
@@ -81,7 +82,9 @@ function LoadedCartView ({setCurrentView}) {
     setLoading(true);
     setMessage(null);
     try {
-      const body = { amount: parseInt(777, 10) };
+      let itemDetails = ShoppingCartUtils.getLocalStorageItems();
+      let totalAmount = ShoppingCartUtils.getCartPrice();
+      const body = { amount: totalAmount, itemDetails };
       const reqOptions = { timeout: 30000 };
       const response = await axios.post('https://fast-shore-71647.herokuapp.com/api/razorpay', body, reqOptions);
 
@@ -90,18 +93,22 @@ function LoadedCartView ({setCurrentView}) {
         key, // Enter the Key ID generated from the Dashboard
         amount: response.data.amount, // Amount is in currency subunits. Default currency is INR.
         currency: response.data.currency,
-        name: 'Acme Corp',
-        description: 'Test Transaction',
+        name: 'EDevi',
+        description: 'EDevi Cart Transaction',
         image: null, // URL
         order_id: response.data.id, // This is the `id` obtained in the response.
         handler: (res) => { handleVerifyResponse(res, response.data.id); },
         prefill: {
-          name: 'Gaurav Kumar',
-          email: 'gaurav.kumar@example.com',
-          contact: '9999999999',
+          name: '',
+          email: '',
+          contact: '',
         },
       };
       const rzp1 = new window.Razorpay(options);
+
+      rzp1.on('payment.failed', function (response){
+        toast.error('Sorry, something went wrong with payment. Please contact us for more help.');
+      });
       rzp1.open();
     } catch (err) {
       setMessage('error');
@@ -141,7 +148,13 @@ function CheckoutCartView(props) {
     const currentItemView = locationSegments.pop();
     const previousItemView = locationSegments[locationSegments.length - 1];
     let itemQuantity = 1;
-
+    const [message, setMessage] = useState(null);
+    if (message) {
+        // Need to clear the shopping cart here
+    }
+    if (message === 'success') {
+        props.history.goBack(0);
+    }
     return (
         <div className="CheckoutCartView">
             {
@@ -160,7 +173,7 @@ function CheckoutCartView(props) {
                     } 
                     {
                     itemQuantity > 0 && (
-                        <LoadedCartView setCurrentView={setCurrentView}/>
+                        <LoadedCartView setCurrentView={setCurrentView} setMessage={setMessage}/>
                     ) 
                     } </span>   
                 </span>
