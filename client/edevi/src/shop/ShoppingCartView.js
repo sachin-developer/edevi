@@ -145,41 +145,49 @@ function ShoppingCartView(props) {
 
   return (
     <div className="ShoppingCartView">
-        <div className={classes.shoppingCartGridList}>
-              <div className={'shoppingCartNavigation'} onClick={onNavigationClick}>
-                 <ArrowBackIcon color={'primary'} fontSize={'large'} className={'NavigationIcon'}/>
-                 <Typography variant="h5" component="h5" className={'NavigationText'}>
-                      {previousItemView}
-                 </Typography>
-                 <ShoppingCartBadge itemCount={ShoppingCartUtils.getCartQuantity()} history ={props.history} currentItemView={locationSegments.join('/')}/>
-
-              </div>
-              <grid className={classes.shoppingCartGList} cols={1} >
-                {
-                  currentDetailedItemView.itemCartView.map((shoppingItem) => (  
-                    <div>
-                      <ShoppingTile shoppingItem={shoppingItem} size={"Large"} onAddToCart={onAddToCart}/>
-                    </div>                     
-                  
-                ))}
+      <div className={classes.shoppingCartGridList}>
+        <div className={"shoppingCartNavigation"} onClick={onNavigationClick}>
+          <ArrowBackIcon
+            color={"primary"}
+            fontSize={"large"}
+            className={"NavigationIcon"}
+          />
+          <Typography variant="h5" component="h5" className={"NavigationText"}>
+            {previousItemView}
+          </Typography>
+          <ShoppingCartBadge
+            itemCount={ShoppingCartUtils.getCartQuantity()}
+            history={props.history}
+            currentItemView={locationSegments.join("/")}
+          />
+        </div>
+        <grid className={classes.shoppingCartGList} cols={1}>
+          {currentDetailedItemView.itemCartView.map((shoppingItem) => (
+            <div>
+              <ShoppingTile
+                shoppingItem={shoppingItem}
+                size={"Large"}
+                onAddToCart={onAddToCart}
+              />
+            </div>
+          ))}
+        </grid>
+        {subOfferingsItem && (
+          <div className="SubOfferings">
+            <grid container>
+              {subOfferingsItem.subOfferings.map((subOfferingItem) => (
+                <Grid item xs>
+                  <ShoppingTile
+                    shoppingItem={subOfferingItem}
+                    size={"Small"}
+                    showBuyNow={false}
+                  />
+                </Grid>
+              ))}
             </grid>
-            {
-              subOfferingsItem && (
-                <div className='SubOfferings'>
-                       <grid container>
-                        {
-                          subOfferingsItem.subOfferings.map((subOfferingItem) => (  
-                            <Grid item xs>
-                              <ShoppingTile shoppingItem={subOfferingItem} size={"Small"} showBuyNow={false}/>
-                            </Grid>
-                          ))
-                        }
-                        </grid>
-                </div>
-              )
-            }
-            
           </div>
+        )}
+      </div>
     </div>
   );
 }
