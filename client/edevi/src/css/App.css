@@ -46,10 +46,10 @@ body {
 /* Landing page Module*/
 
 .LandingPageModule {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     height: 100%;
     background-image: url('../images/LandingBackground.png');
