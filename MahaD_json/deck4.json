@@ -31,14 +31,14 @@
         "id": 5,
         "Text": "Can anyone live without a mother?",
         "allign":"bottom",
-        "image": "AH (37).jpg",
+        "image": "AH_37.jpg",
         "bg-color": ""
     },
     {
         "id": 6,
         "Text": "Is there anyone left to protect another human from a cruel fate? \n Is there anyone left to nurture a child in time?",
         "allign":"botttom",
-        "image": "AH (90).mp4",
+        "image": "AH_90.mp4",
         "bg-color": ""
     },
     {
@@ -52,7 +52,7 @@
         "id": 8,
         "Text": " To the left, to the right, to the inside and the outside \n To all of you, keep your hands in reach to help",
         "allign":"bottom",
-        "image": "AH (92).jpg",
+        "image": "AH_92.jpg",
         "bg-color": ""
     },
     {
