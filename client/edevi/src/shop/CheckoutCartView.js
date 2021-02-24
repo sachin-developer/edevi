@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Button from '@material-ui/core/Button';
 import OrderProcess from './OrderProcess';
-import WithServerRequestRespone from '../hoc/WithServerRequestRespone';
+import WithServerRequestResponse from '../hoc/withServerRequestRespone';
 import ShoppingCartUtils from './ShoppingCartUtils';
 import CheckoutShoppingTile from './CheckoutShoppingTile';
 /* eslint-disable camelcase */
@@ -182,7 +182,7 @@ function CheckoutCartView(props) {
                currentView === 'RazorPay' && 
                 <span>
                     {
-                        WithServerRequestRespone(OrderProcess)({
+                        WithServerRequestResponse(OrderProcess)({
                             
                         })
                     }
