@@ -176,7 +176,7 @@ export const ShoppingItemsList = {
             buttonColor: 'yellow',
             itemCartView: []
         }, {
-            itemName: 'Other Products',
+            itemName: 'Other',
             itemImg: 'shoppingItemPlaceholderImg.png',
             itemTitle: 'Other Products',
             itemId: 'Other',
