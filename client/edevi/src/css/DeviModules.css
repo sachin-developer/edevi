@@ -4,9 +4,12 @@
 
 .shoppingCartNavigation {
     display: block;
-    cursor: pointer;
     width: 100%;
     max-width: 400px;
+}
+
+.shoppingCartNavigation .shopNavigationBack{
+    cursor: pointer;
 }
 
 .BookForAliasGroup label .MuiFormControlLabel-label,

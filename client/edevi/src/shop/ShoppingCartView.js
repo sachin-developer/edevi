@@ -127,8 +127,12 @@ function ShoppingCartView(props) {
   });
   const [refresh, forceRefresh] = React.useState(1);
 
-  const onNavigationClick = () => {
+  const handleBackClick = () => {
     props.history.replace('/shop');
+  }
+  
+  const handleCheckoutClick = () => {
+    props.history.replace('/shop/Checkout');
   }
 
   const getSubOfferingsItem = () => {
@@ -146,19 +150,26 @@ function ShoppingCartView(props) {
   return (
     <div className="ShoppingCartView">
       <div className={classes.shoppingCartGridList}>
-        <div className={"shoppingCartNavigation"} onClick={onNavigationClick}>
-          <ArrowBackIcon
-            color={"primary"}
-            fontSize={"large"}
-            className={"NavigationIcon"}
-          />
-          <Typography variant="h5" component="h5" className={"NavigationText"}>
-            {previousItemView}
-          </Typography>
+        <div className={"shoppingCartNavigation"}>
+          <span className={"shopNavigationBack"} onClick={handleBackClick}>
+            <ArrowBackIcon
+              color={"primary"}
+              fontSize={"large"}
+              className={"NavigationIcon"}
+            />
+            <Typography
+              variant="h5"
+              component="h5"
+              className={"NavigationText"}
+            >
+              {previousItemView}
+            </Typography>
+          </span>
           <ShoppingCartBadge
             itemCount={ShoppingCartUtils.getCartQuantity()}
             history={props.history}
             currentItemView={locationSegments.join("/")}
+            onClick={handleCheckoutClick}
           />
         </div>
         <grid className={classes.shoppingCartGList} cols={1}>
