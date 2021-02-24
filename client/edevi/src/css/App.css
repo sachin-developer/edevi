@@ -46,6 +46,10 @@ body {
 /* Landing page Module*/
 
 .LandingPageModule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
     color: white;
     height: 100%;
     background-image: url('../images/LandingBackground.png');
@@ -56,19 +60,11 @@ body {
 .LandingPageModule .AppLogoImage {
   width:100px;
   height: 100px;
-  position: absolute;
-  top: calc(40%);
-  left: calc(40%);
 }
 
 
 .LandingPageModule .landingPageHeader {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   font-size: 32px;
   opacity: 0.8;
   font-family: 'Lora, Italic';
@@ -79,9 +75,9 @@ body {
     position: absolute;
     bottom: 10%;
     color: white;
-    /* left: 40%; */
+    max-width: 400px;
     width: 80%;
-    left: 10%;
+    margin: 0 auto;
     text-transform: none;
     font-size: var(--font-size-large);
     font-family: 'Open Sans bold'
