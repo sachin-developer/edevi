@@ -144,7 +144,10 @@ body {
   margin: 19px;
 }
 
-.GlitchScreen .GlitchTitle .GlitchName,
+.GlitchScreen .GlitchTitle .GlitchName {
+  color: var(--special-text-color);
+}
+
 .PledgeScreen .PledgeTitleSpecial {
   color: var(--special-text-color);
   text-decoration: underline;
