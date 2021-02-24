@@ -1,0 +1,48 @@
+.DeckOfCards .Card {
+    width: 400px;
+    max-width: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.DeckOfCards {
+    cursor: pointer;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.DeckOfCards .TextContent {
+    text-align: center;
+    padding: 40px 40px 40px 60px;
+    font-family: 'Lora,Bold';
+    font-weight: bold;
+    box-sizing: border-box;
+    color: black;
+    max-width: 100%;
+}
+
+.DeckOfCards .TextContent pre {
+    background-color: white;
+    font-family: 'Lora';
+    white-space: pre-wrap;
+    word-break: normal;
+}
+
+.DeckOfCards .centre {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.DeckOfCards .bottom {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.DeckOfCards .top {
+    justify-content: center;
+    align-items: start;
+}

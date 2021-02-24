@@ -1,0 +1,59 @@
+[
+
+    {
+      "id": 1,
+      "Text": "T to the R to the U-T-H",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#9c9da0"
+    },
+    {
+        "id": 2,
+        "Text": "T to the R to the U-T-H \n How did we meet? \n Online. Unseen. \n How did we greet? \n A meme. An emoji \n It felt only you saw \n what many never see \n You DM-ed that you \n Believed in Me!",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#9c9da0"
+    },
+    {
+        "id": 3,
+        "Text": "So even after logic \n And all the theory \n I switched on the camera \n So you could be with me",
+        "allign":"top",
+        "image": "AH (99).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 4,
+        "Text": "I have to hide behind filters \n So no one places me",
+        "allign":"center",
+        "image": "philosophy_11.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 5,
+        "Text": "This is where I need your help! \n All or Nothing ",
+        "allign":"botttom",
+        "image": "positive_13.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 6,
+        "Text": "What will you take? \n Nothing or Everything? \n What is your opinion? \n To be a part of this or not? \n What is it that makes you \n proud of yourself?",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#9c9da0"
+    },
+    {
+        "id": 7,
+        "Text": "Do to your heart what you say \n In a way that others \n Do to yours? \n You'll never know until you try \n Are you ready to be out of here",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#9c9da0"
+    },
+    {
+        "id": 8,
+        "Text": "THINK: Age, title, membership - mean nothing to true leadership.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#9c9da0"
+    }
+]

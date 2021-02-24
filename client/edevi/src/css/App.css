@@ -101,11 +101,17 @@ body {
   position: relative;
 }
 
-.GlitchScreen .GlitchBackground,
-.PledgeScreen .GlitchBackground{
+.GlitchScreen .GlitchBackground{
   height: 100%;
-  /* background-image: url('../images/Cat_welcome.png'); */
   background-image: url('../images/Cat_welcome-360.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+}
+
+.PledgeScreen .GlitchBackground {
+  height: 100%;
+  background-image: url('../images/Cat_Pledge-360.gif');
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px;

@@ -1,0 +1,59 @@
+[
+
+    {
+      "id": 1,
+      "Text": "Memories on Cloud",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#456673"
+    },
+    {
+        "id": 2,
+        "Text": "Shoeboxes are no longer in vogue \n Not even tins with bright paint  \n Memories are uploaded - \n On drives, phones, desktops.",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 3,
+        "Text": "These things that need preserving \n Do they know they are to be rescued? \n What museum would keep these? \n Traces of youth, proofs of living",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 4,
+        "Text": "Not data, not evidence \n … but memories! \n Of children’s laughter  \n And stories under seas of stars. \n It's a thing of art, I'd say.",
+        "allign":"bottom",
+        "image": "divine_s_-12.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 5,
+        "Text": "The most beautiful thing in the world \n is that we have a moment, we can go there \n And that's what art is, it's that moment.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 6,
+        "Text": "We're not in that moment, we are memories, it's the way that we remember it.",
+        "allign":"center",
+        "image": "divine_s_-5.jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "The thing in the world of the present \n The thing of the future \n This is a thing you do and don't have ",
+        "allign":"top",
+        "image": "science_25.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": "THINK: Start where you are, with what you have. Think ‘We’ not ‘I’.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    }
+]

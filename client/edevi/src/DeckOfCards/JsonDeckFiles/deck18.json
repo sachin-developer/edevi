@@ -1,0 +1,59 @@
+[
+
+    {
+      "id": 1,
+      "Text": "In Memoriam Kerala Girl",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#4f504d"
+    },
+    {
+        "id": 2,
+        "Text": "14. Dalit. Girl. Missing since 4 PM. \n Kerosene doused. Ablaze.  \n Bright student. Fading star. \n Receding from public memory. \n Dead!",
+        "allign":"bottom",
+        "image": "education_11.png",
+        "bg-color": ""
+    },
+    {
+        "id": 3,
+        "Text": "When does a headline cease to become a cold, distant fact?  \n When do the story’s flames leap up and engulf you too?",
+        "allign":"bottom",
+        "image": "truth_34.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 4,
+        "Text": "They say she lit a fire for herself \n After writing a meticulous, tiny note.  \n Hinting at a soul piercing lament. \n But just about; she died unheard. ",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#4f504d"
+    },
+    {
+        "id": 5,
+        "Text": "RIP Student of Government Higher Secondary School Irimbiliyam \n As the adults around you rinse and repeat \n “Devika your TV set could not be repaired” \n “Your father lost his job as an agricultural hand” \n “They didn’t own a mobile or tablet ",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#4f504d"
+    },
+    {
+        "id": 6,
+        "Text": "Your parents Sheeba and Balakrishan embrace each other wordless \n As journalists join your wake and chastise failed virtual experiments \n Activists write petitions for reliable internet connections",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#4f504d"
+    },
+    {
+        "id": 7,
+        "Text": "“Do-gooders please donate funds, old phones, and computers \n 321 million students must attend class",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#4f504d"
+    },
+    {
+        "id": 8,
+        "Text": "DO: Take a walk, make note of what’s not OK. Don’t fret; fix it.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#4f504d"
+    }
+]

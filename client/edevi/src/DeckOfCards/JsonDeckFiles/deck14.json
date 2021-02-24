@@ -1,0 +1,59 @@
+[
+
+  {
+    "id": 1,
+    "Text": "Memories on Cloud",
+    "allign":"centre",
+    "image": "",
+    "bg-color": "#7e756a"
+  },
+  {
+      "id": 2,
+      "Text": "Shoeboxes are no longer in vogue \n Not even tins with bright paint  \n Memories are uploaded - \n On drives, phones, desktops.",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#7e756a"
+  },
+  {
+      "id": 3,
+      "Text": "These things that need preserving \n Do they know they are to be rescued? \n What museum would keep these? \n Traces of youth, proofs of living",
+      "allign":"center",
+      "image": "",
+      "bg-color": "#7e756a"
+  },
+  {
+      "id": 4,
+      "Text": "Not data, not evidence \n … but memories! \n Of children’s laughter  \n And stories under seas of stars. \n The only thing they do with their time is upload.",
+      "allign":"center",
+      "image": "divine_s_-24.mp4",
+      "bg-color": ""
+  },
+  {
+      "id": 5,
+      "Text": "The data we upload and store \n On drives, phones, desks \n And on drives, phones, desks ",
+      "allign":"top",
+      "image": "AH (71).jpg",
+      "bg-color": ""
+  },
+  {
+      "id": 6,
+      "Text": "The rest of the time, we get bored and go looking for fun. \nI wonder, what should we do with all the data? \n Our data is a great thing.",
+      "allign":"center",
+      "image": "",
+      "bg-color": "#7e756a"
+  },
+  {
+      "id": 7,
+      "Text": "It's a great thing if we can use it \n And make it useful.\n I wonder what kind of useful things! The story of how ?",
+      "allign":"bottom",
+      "image": "divine_s_-40.mp4",
+      "bg-color": ""
+  },
+  {
+      "id": 8,
+      "Text": "Use tech you own to spark humanity.",
+      "allign":"center",
+      "image": "",
+      "bg-color": "#7e756a"
+  }
+]

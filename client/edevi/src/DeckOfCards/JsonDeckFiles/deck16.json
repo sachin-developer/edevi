@@ -1,0 +1,59 @@
+[
+
+    {
+      "id": 1,
+      "Text": "Memories on Cloud",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#393634"
+    },
+    {
+        "id": 2,
+        "Text": "Shoeboxes are no longer in vogue \n Not even tins with bright paint  \n Memories are uploaded - \n On drives, phones, desktops.",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#393634"
+    },
+    {
+        "id": 3,
+        "Text": "These things that need preserving \n Do they know they are to be rescued? \n What museum would keep these? \n Traces of youth, proofs of living",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#393634"
+    },
+    {
+        "id": 4,
+        "Text": "Not data, not evidence \n … but memories! \n Of children’s laughter  \n And stories under seas of stars. \n Tiny pieces of me are still alive here.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#393634"
+    },
+    {
+        "id": 5,
+        "Text": " The digital age is alive with people \n Who think their memory is worth more than gold",
+        "allign":"bottom",
+        "image": "divine_s_-34.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 6,
+        "Text": "But can they see it in front of them? \n A new generation is learning about memory \n And the truth about us. \n Are we all born with a memory? \n Maybe. Or not",
+        "allign":"top",
+        "image": "AH (48).jpg",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "The more we know about the nature of memory \n The more we wonder, \n Are we really born with a memory?",
+        "allign":"top",
+        "image": "inspiration_1.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": "THINK: A caterpillar becomes a butterfly if it’s a patient cocoon.",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#393634"
+    }
+]
