@@ -36,7 +36,7 @@ function LandingPageModule(props) {
               `}
               src={logoMedium}
             />
-            <div className={'landingPageHeader'} variant="h2">The path to infinity <br/> begins here </div> 
+            <div className={'landingPageHeader'} variant="h2">The path to infinity begins here </div> 
             <Button className={'EnterTempleButton'} onClick={()=>{props.history.push('Glitch')}}> All may enter </Button>
     </div>
   );
