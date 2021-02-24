@@ -128,7 +128,7 @@ function ShoppingCartView(props) {
   const [refresh, forceRefresh] = React.useState(1);
 
   const onNavigationClick = () => {
-     //props.history.goBack();
+    props.history.replace('/shop');
   }
 
   const getSubOfferingsItem = () => {
