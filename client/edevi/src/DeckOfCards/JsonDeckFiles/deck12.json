@@ -1,0 +1,66 @@
+[
+
+    {
+      "id": 1,
+      "Text": "Memories on Cloud",
+      "allign":"centre",
+      "image": "",
+      "bg-color": "#456673"
+    },
+    {
+        "id": 2,
+        "Text": "Shoeboxes are no longer in vogue",
+        "allign":"centre",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 3,
+        "Text": "Not even tins with bright paint. \n Memories are uploaded \n - On drives, phones, desktops ",
+        "allign":"bottom",
+        "image": "divine_s_-12.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 4,
+        "Text": "These things that need preserving \n Do they know they are to be rescued? \n What museum would keep these? \n Traces of youth, proofs of living",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 5,
+        "Text": "Not entries in a database \n Nor artefacts for an archive \n On what cloud will we register \n Traces of migrants and refugees?",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 6,
+        "Text": "Not data, not evidence \n … but memories! \n Of children’s laughter  \n And stories under seas of stars.\n The future was written on the pages I saved on some of my books.",
+        "allign":"center",
+        "image": "Books_7.mp4",
+        "bg-color": ""
+    },
+    {
+        "id": 7,
+        "Text": "The words:What do we do with all of this ? \n Well, we could burn them to ashes ",
+        "allign":"top",
+        "image": "life_10.png",
+        "bg-color": ""
+    },
+    {
+        "id": 8,
+        "Text": "Or make them into a book \n Or send them to a museum  \n Or make a movie about them \n Or put them on the internet \n What about a movie about this book? ",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    },
+    {
+        "id": 9,
+        "Text": "DO: Songs change the world. Sing one or listen to one! ",
+        "allign":"center",
+        "image": "",
+        "bg-color": "#456673"
+    }
+]
