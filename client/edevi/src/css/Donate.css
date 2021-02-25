@@ -1,0 +1,67 @@
+.DonateModule,.AstitvaModule{
+    padding: 20px;
+    font-family:'Open Sans regular';
+}
+.introBlock{
+    margin-top: 50px;
+    background-color: #252850;
+    border-radius: 4.5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.DonateModule h3,.AstitvaModule h3{
+    color: white;
+    position: relative;
+}
+.DonateModule h3::after,.AstitvaModule h3::after{
+    position: absolute;
+    content: "";
+    top: 35px;
+    width: 200px;
+    height:2px;
+    background-color:#252850;
+    display: block;
+}
+.DonateModule div.intro{
+    padding-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+}
+.DonateModule a{
+    color: #ebc71f;
+}
+.DonateModule a:hover{
+    cursor: pointer;
+}
+.DonateModule h4{
+    color: white;
+}
+.cardsBlock{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.singleCard{
+    border-radius: 4.5px;
+    background-color: #252850;
+
+}
+.cardsBlock img{
+   width: 100%;
+   grid-row-end: span 2;
+}
+.singleCard p{
+    padding: 0px 10px;
+    background-attachment: fixed;
+    border-radius: 4.5px;
+    text-align: justify;
+    color: white;
+}
+@media(max-width:500px){
+    .cardsBlock{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+ }
